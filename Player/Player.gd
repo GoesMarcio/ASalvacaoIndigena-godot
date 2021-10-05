@@ -3,6 +3,7 @@ extends KinematicBody2D
 export var run_speed := 100
 export var gravity := 35
 onready var sprite := $AnimatedSprite
+onready var life := 100
 
 #onready var bullet := preload("res://Weapons/Bullet.tscn")
 export (PackedScene) var bullet : PackedScene
@@ -14,7 +15,11 @@ func get_input_side():
 	velocity.x = Input.get_action_strength("ui_right")-Input.get_action_strength("ui_left")
 	velocity.y = Input.get_action_strength("ui_down")-Input.get_action_strength("ui_up")
 	velocity = velocity.normalized() * run_speed
-
+	
+	if velocity.x != 0:
+		life -= abs(velocity.x/1000)
+		get_tree().call_group("Life_HUD", "update_life", life)
+	
 	if velocity.x > 0:
 		sprite.play("right")
 	elif velocity.x < 0:
