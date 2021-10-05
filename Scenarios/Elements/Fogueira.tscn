@@ -1,14 +1,48 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://Scenarios/Elements/Fogueira.png" type="Texture" id=1]
+[ext_resource path="res://Scenarios/Elements/Fogueira_animacao.png" type="Texture" id=1]
+
+[sub_resource type="AnimatedTexture" id=1]
+
+[sub_resource type="AtlasTexture" id=2]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 0, 0, 76, 87 )
+
+[sub_resource type="AtlasTexture" id=3]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 76, 0, 76, 87 )
+
+[sub_resource type="AtlasTexture" id=4]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 152, 0, 76, 87 )
+
+[sub_resource type="AtlasTexture" id=5]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 228, 0, 76, 87 )
+
+[sub_resource type="SpriteFrames" id=6]
+animations = [ {
+"frames": [ SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
 
 [node name="Fogueira" type="StaticBody2D"]
 
 [node name="Fogueira" type="Sprite" parent="."]
-position = Vector2( 81.7826, 337.192 )
 scale = Vector2( 0.588623, 0.589143 )
-texture = ExtResource( 1 )
+texture = SubResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+scale = Vector2( 0.589, 0.589 )
+frames = SubResource( 6 )
+frame = 2
+playing = true
 
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="."]
-position = Vector2( 83.886, 337.029 )
-polygon = PoolVector2Array( -2.73125, 17.3755, -12.6525, 15.9865, -15.4305, 10.8275, -20.7879, 9.43851, -18.6053, 4.08102, -16.621, 3.0889, -9.47771, -5.64182, -6.69976, -14.7694, -0.548576, -17.7458, 4.21362, -16.3568, 6.99158, -3.26071, 13.1428, -1.27646, 15.3254, 3.8826, 15.7223, 8.64481, 11.9522, 10.4306, 9.96796, 14.2007, 6.79315, 15.3913, 4.8089, 14.9944, 2.03094, 17.9708 )
+polygon = PoolVector2Array( -4.17517, 19.7865, -8.89987, 21.0464, -13.9396, 16.0067, -18.0343, 13.8018, -18.6053, 4.08102, -16.621, 3.0889, -9.47771, -5.64182, -6.69976, -14.7694, -0.548576, -17.7458, 11.2589, -18.9561, 9.99895, -4.78199, 14.4087, -1.00223, 16.9285, 3.72248, 18.1884, 7.50224, 17.8734, 12.5419, 13.4637, 15.0618, 10.6289, 18.5266, 7.4791, 19.1565, 2.12444, 21.3614 )
