@@ -20,7 +20,7 @@ func _ready():
 
 func _on_button_gui_input(event):
 	if event.is_pressed():
-		get_tree().change_scene("res://Main.tscn")
+		get_tree().change_scene("res://Scenarios/Tribe/Tribe2.tscn")
 
 func _on_button3_gui_input(event):
 	if event.is_pressed():

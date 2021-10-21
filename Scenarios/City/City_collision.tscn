@@ -3,40 +3,40 @@
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenarios/City/City.tres" type="TileSet" id=2]
 
-[sub_resource type="RectangleShape2D" id=10]
+[sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 16.0991, 7.02048 )
 
-[sub_resource type="RectangleShape2D" id=11]
+[sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 32.8208, 8.2657 )
 
-[sub_resource type="RectangleShape2D" id=12]
+[sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 87.8302, 10.3527 )
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 87.712, 80.0063 )
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 8.09389, 19.051 )
 
-[sub_resource type="RectangleShape2D" id=3]
+[sub_resource type="RectangleShape2D" id=6]
 extents = Vector2( 8.59058, 8.05084 )
 
-[sub_resource type="RectangleShape2D" id=4]
+[sub_resource type="RectangleShape2D" id=7]
 extents = Vector2( 127.727, 31.8839 )
 
-[sub_resource type="RectangleShape2D" id=5]
+[sub_resource type="RectangleShape2D" id=8]
 extents = Vector2( 5.37643, 11.0236 )
 
-[sub_resource type="RectangleShape2D" id=6]
+[sub_resource type="RectangleShape2D" id=9]
 extents = Vector2( 8.67529, 8.30334 )
 
-[sub_resource type="RectangleShape2D" id=7]
+[sub_resource type="RectangleShape2D" id=10]
 extents = Vector2( 8.09094, 12.0621 )
 
-[sub_resource type="RectangleShape2D" id=9]
+[sub_resource type="RectangleShape2D" id=11]
 extents = Vector2( 8.03778, 15.2684 )
 
-[sub_resource type="RectangleShape2D" id=8]
+[sub_resource type="RectangleShape2D" id=12]
 extents = Vector2( 6.2439, 11.7511 )
 
 [node name="Node2D" type="Node2D"]
@@ -71,39 +71,39 @@ tile_data = PoolIntArray( 65549, 132, 0, 65551, 132, 0, 196661, 156, 0, 393232, 
 
 [node name="banco2" type="CollisionShape2D" parent="Node2D/down"]
 position = Vector2( 656.551, 151.149 )
-shape = SubResource( 10 )
+shape = SubResource( 1 )
 
 [node name="banco" type="CollisionShape2D" parent="Node2D/down"]
 position = Vector2( 608.528, 150.905 )
-shape = SubResource( 10 )
+shape = SubResource( 1 )
 
 [node name="bancos" type="CollisionShape2D" parent="Node2D/down"]
 position = Vector2( 240.069, 23.1933 )
-shape = SubResource( 11 )
+shape = SubResource( 2 )
 
 [node name="predio_branco2" type="CollisionShape2D" parent="Node2D/down"]
 position = Vector2( 296.313, 5.01271 )
-shape = SubResource( 12 )
+shape = SubResource( 3 )
 
 [node name="predio_branco" type="CollisionShape2D" parent="Node2D/down"]
 position = Vector2( 295.945, 447.148 )
-shape = SubResource( 1 )
+shape = SubResource( 4 )
 
 [node name="arvore" type="CollisionShape2D" parent="Node2D/down"]
 position = Vector2( 231.156, 526.051 )
-shape = SubResource( 2 )
+shape = SubResource( 5 )
 
 [node name="arbusto" type="CollisionShape2D" parent="Node2D/down"]
 position = Vector2( 263.649, 535.408 )
-shape = SubResource( 3 )
+shape = SubResource( 6 )
 
 [node name="arbusto2" type="CollisionShape2D" parent="Node2D/down"]
 position = Vector2( 327.63, 534.842 )
-shape = SubResource( 3 )
+shape = SubResource( 6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/down"]
 position = Vector2( 640.048, 447.712 )
-shape = SubResource( 4 )
+shape = SubResource( 7 )
 
 [node name="Player" parent="Node2D" instance=ExtResource( 1 )]
 position = Vector2( 942.554, 925.148 )
@@ -147,44 +147,44 @@ tile_data = PoolIntArray( 589857, 116, 0, 589868, 116, 0, 655402, 118, 0, 852013
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/top_predio"]
 position = Vector2( 295.945, 447.148 )
-shape = SubResource( 1 )
+shape = SubResource( 4 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Node2D/top_predio"]
 position = Vector2( 488.65, 409.288 )
-shape = SubResource( 5 )
+shape = SubResource( 8 )
 
 [node name="CollisionShape2D7" type="CollisionShape2D" parent="Node2D/top_predio"]
 position = Vector2( 663.67, 280.056 )
-shape = SubResource( 6 )
+shape = SubResource( 9 )
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="Node2D/top_predio"]
 position = Vector2( 535.888, 279.76 )
-shape = SubResource( 6 )
+shape = SubResource( 9 )
 
 [node name="CollisionShape2D10" type="CollisionShape2D" parent="Node2D/top_predio"]
 position = Vector2( 679.842, 185.418 )
-shape = SubResource( 7 )
+shape = SubResource( 10 )
 
 [node name="CollisionShape2D9" type="CollisionShape2D" parent="Node2D/top_predio"]
 position = Vector2( 728.502, 232.858 )
-shape = SubResource( 7 )
+shape = SubResource( 10 )
 
 [node name="CollisionShape2D8" type="CollisionShape2D" parent="Node2D/top_predio"]
 position = Vector2( 727.48, 186.822 )
-shape = SubResource( 5 )
+shape = SubResource( 8 )
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Node2D/top_predio"]
 position = Vector2( 552.131, 186.715 )
-shape = SubResource( 5 )
+shape = SubResource( 8 )
 
 [node name="CollisionShape2D12" type="CollisionShape2D" parent="Node2D/top_predio"]
 position = Vector2( 472.22, 447.427 )
-shape = SubResource( 9 )
+shape = SubResource( 11 )
 
 [node name="CollisionShape2D11" type="CollisionShape2D" parent="Node2D/top_predio"]
 position = Vector2( 504.892, 451.447 )
-shape = SubResource( 8 )
+shape = SubResource( 12 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Node2D/top_predio"]
 position = Vector2( 407.721, 487.077 )
-shape = SubResource( 5 )
+shape = SubResource( 8 )

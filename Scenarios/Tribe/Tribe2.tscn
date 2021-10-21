@@ -1,0 +1,207 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/Tilesets/bridge.png" type="Texture" id=2]
+[ext_resource path="res://Scenarios/Elements/Fogueira.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenarios/Elements/Barraca.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenarios/Tribe/Tribe2.gd" type="Script" id=5]
+
+[sub_resource type="StreamTexture" id=1]
+flags = 4
+load_path = "res://.import/last_tribe.png-a30f5e8a2a13b8284ddf3539770f3a94.stex"
+
+[sub_resource type="ConvexPolygonShape2D" id=2]
+points = PoolVector2Array( 17.257, 22.5832, 25.5903, 6.61098, 37.3958, 6.61098, 47.8125, 24.6665, 49.8958, 45.4999, 45.0347, 61.4721, 17.9514, 63.5554, 13.7847, 43.4165 )
+
+[sub_resource type="ConvexPolygonShape2D" id=3]
+points = PoolVector2Array( 35.2014, 0.741913, 51.1736, 9.76968, 58.8125, 28.5197, 40.0625, 43.7975, 19.9236, 44.4919, 7.42361, 25.0475, 9.50696, 14.6308, 17.8403, 9.76968 )
+
+[sub_resource type="ConvexPolygonShape2D" id=4]
+points = PoolVector2Array( 55.9236, 25.0475, 43.4236, 45.1864, 18.4236, 40.3253, 10.7847, 22.2697, 29.5347, 1.43637 )
+
+[sub_resource type="ConvexPolygonShape2D" id=5]
+points = PoolVector2Array( 8.8125, 26.353, 30.3403, 10.3808, 56.0347, 27.7419, 53.257, 49.2697, 40.757, 62.4641, 19.9236, 62.4641, 6.03473, 43.0197 )
+
+[sub_resource type="ConvexPolygonShape2D" id=6]
+points = PoolVector2Array( 33.7014, 9.68637, 48.9792, 21.4919, 53.1458, 44.4086, 47.5903, 63.853, 13.5625, 63.1586, 5.92361, 41.6308, 18.4236, 13.1586 )
+
+[sub_resource type="TileSet" id=7]
+0/name = "bridge.png 0"
+0/texture = ExtResource( 2 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 96, 80, 112, 80 )
+0/tile_mode = 1
+0/autotile/bitmask_mode = 0
+0/autotile/bitmask_flags = [  ]
+0/autotile/icon_coordinate = Vector2( 0, 0 )
+0/autotile/tile_size = Vector2( 112, 80 )
+0/autotile/spacing = 0
+0/autotile/occluder_map = [  ]
+0/autotile/navpoly_map = [  ]
+0/autotile/priority_map = [  ]
+0/autotile/z_index_map = [  ]
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "bridge2"
+1/texture = ExtResource( 2 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 96, 16, 112, 64 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+2/name = "bridge.png 2"
+2/texture = ExtResource( 2 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 0, 160, 64, 64 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape = SubResource( 2 )
+2/shape_one_way = false
+2/shape_one_way_margin = 1.0
+2/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 2 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+2/z_index = 0
+3/name = "bridge.png 3"
+3/texture = ExtResource( 2 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 64, 176, 64, 48 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape = SubResource( 3 )
+3/shape_one_way = false
+3/shape_one_way_margin = 1.0
+3/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 3 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+3/z_index = 0
+4/name = "bridge.png 4"
+4/texture = ExtResource( 2 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 128, 176, 64, 48 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape = SubResource( 4 )
+4/shape_one_way = false
+4/shape_one_way_margin = 1.0
+4/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 4 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+4/z_index = 0
+5/name = "bridge.png 5"
+5/texture = ExtResource( 2 )
+5/tex_offset = Vector2( 0, 0 )
+5/modulate = Color( 1, 1, 1, 1 )
+5/region = Rect2( 64, 224, 64, 64 )
+5/tile_mode = 0
+5/occluder_offset = Vector2( 0, 0 )
+5/navigation_offset = Vector2( 0, 0 )
+5/shape_offset = Vector2( 0, 0 )
+5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+5/shape = SubResource( 5 )
+5/shape_one_way = false
+5/shape_one_way_margin = 1.0
+5/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+5/z_index = 0
+6/name = "bridge.png 6"
+6/texture = ExtResource( 2 )
+6/tex_offset = Vector2( 0, 0 )
+6/modulate = Color( 1, 1, 1, 1 )
+6/region = Rect2( 128, 224, 64, 64 )
+6/tile_mode = 0
+6/occluder_offset = Vector2( 0, 0 )
+6/navigation_offset = Vector2( 0, 0 )
+6/shape_offset = Vector2( 0, 0 )
+6/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+6/shape = SubResource( 6 )
+6/shape_one_way = false
+6/shape_one_way_margin = 1.0
+6/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 6 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+6/z_index = 0
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 5 )
+
+[node name="mapa" type="StaticBody2D" parent="."]
+
+[node name="mapa2" type="Sprite" parent="mapa"]
+scale = Vector2( 0.769018, 0.770388 )
+texture = SubResource( 1 )
+centered = false
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="mapa"]
+build_mode = 1
+polygon = PoolVector2Array( 1.28564, 604.056, 689.133, 602.172, 691.017, 524.907, 672.172, 425.028, 635.992, 334.116, 580.038, 309.296, 578.356, 290.757, 1078.5, 292.936, 1078.27, 236.914, 580.038, 235.707, 628.207, 233.055, 657.096, 215.847, 689.133, 174.388, 700.44, 95.2382, 717.4, 36.8183, 711.747, -0.871979, -0.598877, -0.871979 )
+
+[node name="Fogueira" parent="mapa" instance=ExtResource( 3 )]
+position = Vector2( 487.665, 177.679 )
+
+[node name="Position2D" type="Position2D" parent="mapa"]
+position = Vector2( 1048.53, 265.723 )
+
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2( -1, 0 )
+scale = Vector2( 1.8, 1.8 )
+tile_set = SubResource( 7 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( -65536, 4, 0, -65535, 4, 0, -65534, 2, 0, -65533, 5, 0, -65532, 3, 0, 65535, 2, 0, 0, 4, 0, 1, 2, 0, 2, 5, 0, 3, 6, 0, 4, 5, 0, 131071, 5, 0, 65536, 2, 0, 65537, 2, 0, 65538, 4, 0, 65539, 2, 0, 196607, 3, 0, 131072, 2, 0, 131073, 2, 0, 131074, 5, 0, 131075, 2, 0, 262143, 2, 0, 196608, 6, 0, 196609, 5, 0, 196610, 2, 0, 262144, 4, 0, 262145, 2, 0, 262146, 5, 0, 262154, 1, 0, 262157, 0, 0, 262160, 0, 0, 393215, 3, 0, 327680, 6, 0, 327681, 3, 0, 458751, 5, 0, 393216, 4, 0, 393217, 4, 0, 524287, 4, 0, 458752, 5, 0, 458753, 6, 0, 589823, 3, 0, 524288, 2, 0 )
+
+[node name="YSort" type="YSort" parent="."]
+
+[node name="Player" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 300, 325 )
+
+[node name="Barraca" parent="YSort" instance=ExtResource( 4 )]
+position = Vector2( 412.702, 117.944 )
+scale = Vector2( 1, 0.999999 )

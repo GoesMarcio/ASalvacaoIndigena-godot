@@ -22,7 +22,7 @@ flags = 4
 atlas = ExtResource( 1 )
 region = Rect2( 228, 0, 76, 87 )
 
-[sub_resource type="SpriteFrames" id=6]
+[sub_resource type="SpriteFrames" id=5]
 animations = [ {
 "frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ) ],
 "loop": true,
@@ -33,8 +33,8 @@ animations = [ {
 [node name="Fogueira" type="StaticBody2D"]
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-frames = SubResource( 6 )
-frame = 2
+frames = SubResource( 5 )
+frame = 3
 playing = true
 
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="."]
