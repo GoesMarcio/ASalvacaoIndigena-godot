@@ -10,19 +10,19 @@
 flags = 4
 load_path = "res://.import/last_tribe.png-a30f5e8a2a13b8284ddf3539770f3a94.stex"
 
-[sub_resource type="ConvexPolygonShape2D" id=2]
+[sub_resource type="ConvexPolygonShape2D" id=8]
 points = PoolVector2Array( 17.257, 22.5832, 25.5903, 6.61098, 37.3958, 6.61098, 47.8125, 24.6665, 49.8958, 45.4999, 45.0347, 61.4721, 17.9514, 63.5554, 13.7847, 43.4165 )
 
-[sub_resource type="ConvexPolygonShape2D" id=3]
+[sub_resource type="ConvexPolygonShape2D" id=9]
 points = PoolVector2Array( 35.2014, 0.741913, 51.1736, 9.76968, 58.8125, 28.5197, 40.0625, 43.7975, 19.9236, 44.4919, 7.42361, 25.0475, 9.50696, 14.6308, 17.8403, 9.76968 )
 
-[sub_resource type="ConvexPolygonShape2D" id=4]
+[sub_resource type="ConvexPolygonShape2D" id=10]
 points = PoolVector2Array( 55.9236, 25.0475, 43.4236, 45.1864, 18.4236, 40.3253, 10.7847, 22.2697, 29.5347, 1.43637 )
 
-[sub_resource type="ConvexPolygonShape2D" id=5]
+[sub_resource type="ConvexPolygonShape2D" id=11]
 points = PoolVector2Array( 8.8125, 26.353, 30.3403, 10.3808, 56.0347, 27.7419, 53.257, 49.2697, 40.757, 62.4641, 19.9236, 62.4641, 6.03473, 43.0197 )
 
-[sub_resource type="ConvexPolygonShape2D" id=6]
+[sub_resource type="ConvexPolygonShape2D" id=12]
 points = PoolVector2Array( 33.7014, 9.68637, 48.9792, 21.4919, 53.1458, 44.4086, 47.5903, 63.853, 13.5625, 63.1586, 5.92361, 41.6308, 18.4236, 13.1586 )
 
 [sub_resource type="TileSet" id=7]
@@ -73,14 +73,14 @@ points = PoolVector2Array( 33.7014, 9.68637, 48.9792, 21.4919, 53.1458, 44.4086,
 2/navigation_offset = Vector2( 0, 0 )
 2/shape_offset = Vector2( 0, 0 )
 2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-2/shape = SubResource( 2 )
+2/shape = SubResource( 8 )
 2/shape_one_way = false
 2/shape_one_way_margin = 1.0
 2/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 2 ),
+"shape": SubResource( 8 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 2/z_index = 0
@@ -94,14 +94,14 @@ points = PoolVector2Array( 33.7014, 9.68637, 48.9792, 21.4919, 53.1458, 44.4086,
 3/navigation_offset = Vector2( 0, 0 )
 3/shape_offset = Vector2( 0, 0 )
 3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-3/shape = SubResource( 3 )
+3/shape = SubResource( 9 )
 3/shape_one_way = false
 3/shape_one_way_margin = 1.0
 3/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 3 ),
+"shape": SubResource( 9 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 3/z_index = 0
@@ -115,14 +115,14 @@ points = PoolVector2Array( 33.7014, 9.68637, 48.9792, 21.4919, 53.1458, 44.4086,
 4/navigation_offset = Vector2( 0, 0 )
 4/shape_offset = Vector2( 0, 0 )
 4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-4/shape = SubResource( 4 )
+4/shape = SubResource( 10 )
 4/shape_one_way = false
 4/shape_one_way_margin = 1.0
 4/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 4 ),
+"shape": SubResource( 10 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 4/z_index = 0
@@ -136,14 +136,14 @@ points = PoolVector2Array( 33.7014, 9.68637, 48.9792, 21.4919, 53.1458, 44.4086,
 5/navigation_offset = Vector2( 0, 0 )
 5/shape_offset = Vector2( 0, 0 )
 5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-5/shape = SubResource( 5 )
+5/shape = SubResource( 11 )
 5/shape_one_way = false
 5/shape_one_way_margin = 1.0
 5/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 5 ),
+"shape": SubResource( 11 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 5/z_index = 0
@@ -157,19 +157,19 @@ points = PoolVector2Array( 33.7014, 9.68637, 48.9792, 21.4919, 53.1458, 44.4086,
 6/navigation_offset = Vector2( 0, 0 )
 6/shape_offset = Vector2( 0, 0 )
 6/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-6/shape = SubResource( 6 )
+6/shape = SubResource( 12 )
 6/shape_one_way = false
 6/shape_one_way_margin = 1.0
 6/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 6 ),
+"shape": SubResource( 12 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 6/z_index = 0
 
-[node name="Node2D" type="Node2D"]
+[node name="Tribe" type="Node2D"]
 script = ExtResource( 5 )
 
 [node name="mapa" type="StaticBody2D" parent="."]

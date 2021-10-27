@@ -26,11 +26,6 @@ func _ready() -> void:
 		sprite.play('down')
 		sprite.stop()
 
-
-
-func change_position(position_v):
-	print(position)
-	print(position_v)
 	
 # Movimento lateral com gravidade
 func get_input_side():
