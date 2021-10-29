@@ -3,6 +3,7 @@ extends Node2D
 var position_player = Vector2()
 var hut = preload("res://Scenarios/Tribe/Indoors/Indoors.tscn")
 var tribe = preload("res://Scenarios/Tribe/Tribe2.tscn")
+var city = preload("res://Scenarios/City/City_collision.tscn")
 
 func save_player_pos(position):
 	position_player = position
