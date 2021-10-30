@@ -8,7 +8,6 @@
 
 [sub_resource type="StreamTexture" id=1]
 flags = 4
-load_path = "res://.import/last_tribe.png-a30f5e8a2a13b8284ddf3539770f3a94.stex"
 
 [sub_resource type="ConvexPolygonShape2D" id=2]
 points = PoolVector2Array( 17.257, 22.5832, 25.5903, 6.61098, 37.3958, 6.61098, 47.8125, 24.6665, 49.8958, 45.4999, 45.0347, 61.4721, 17.9514, 63.5554, 13.7847, 43.4165 )

@@ -7,9 +7,12 @@ export var turn := 'down'
 onready var sprite := $AnimatedSprite
 onready var life := 100
 
-#onready var bullet := preload("res://Weapons/Bullet.tscn")
-export (PackedScene) var bullet : PackedScene
-	
+onready var tribe = get_node("/root/Game/Tribe")
+
+onready var bullet := preload("res://Player/Arrow.tscn")
+#export (PackedScene) var bullet : PackedScene
+
+var side_position := Vector2(0,1)
 var velocity := Vector2()
 
 func _ready() -> void:
@@ -39,15 +42,26 @@ func get_input_side():
 	
 	if velocity.x > 0:
 		sprite.play("right")
+		side_position = Vector2(1,0)
 	elif velocity.x < 0:
 		sprite.play("left")
+		side_position = Vector2(-1,0)
 	elif velocity.y > 0:
 		sprite.play("down")
+		side_position = Vector2(0,1)
 	elif velocity.y < 0:
 		sprite.play("up")
+		side_position = Vector2(0,-1)
 	else:
 		sprite.stop()
 		
+	# Arrow
+	if Input.is_action_just_pressed("space"):
+		print("paw")
+		var b := bullet.instance()
+		b.position = position
+		tribe.add_child(b)
+		b.change_side(side_position)
 
 func _physics_process(delta):
 	get_input_side()
