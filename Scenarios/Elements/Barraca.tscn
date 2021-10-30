@@ -11,10 +11,10 @@ collision_layer = 2
 texture = ExtResource( 1 )
 
 [node name="CollisionShape2D2" type="CollisionPolygon2D" parent="."]
-polygon = PoolVector2Array( 44.4182, 40.3316, 22.2945, 2.69218, -0.181394, -6.47274, -22.6572, 1.02583, -46.1937, 40.3316, -31.5637, 53.074, -0.887741, 59.6811, 33.0917, 53.5459 )
+polygon = PoolVector2Array( 46.5701, 40.3067, 47.5063, 24.2952, -1.54872, 10.2671, -46.8662, 26.6332, -46.1937, 40.3316, -33.7121, 53.6526, -0.030412, 61.1692, 33.0917, 53.5459 )
 
 [node name="Area2D" type="Area2D" parent="."]
 script = ExtResource( 2 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
-polygon = PoolVector2Array( -0.808701, 11.6871, 6.68326, 11.6871, 26.6618, 52.9292, 0.0237386, 60.0112, -27.4467, 53.7624, -9.54931, 12.9369 )
+polygon = PoolVector2Array( 12.4016, 30.8534, 12.9717, 63.1092, -11.1714, 63.1092, -10.6552, 30.5754 )

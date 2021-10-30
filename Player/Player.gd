@@ -1,13 +1,13 @@
 extends KinematicBody2D
 
+class_name Player
+
 export var run_speed := 150
 export var gravity := 35
 export var turn := 'down'
 
 onready var sprite := $AnimatedSprite
 onready var life := 100
-
-onready var tribe = get_node("/root/Game/Tribe")
 
 onready var bullet := preload("res://Player/Arrow.tscn")
 #export (PackedScene) var bullet : PackedScene
@@ -57,12 +57,14 @@ func get_input_side():
 		
 	# Arrow
 	if Input.is_action_just_pressed("space"):
-		print("paw")
-		var b := bullet.instance()
-		b.position = position
-		tribe.add_child(b)
-		b.change_side(side_position)
+		shoot()
 
 func _physics_process(delta):
 	get_input_side()
 	velocity = move_and_slide(velocity, Vector2.UP)
+
+func shoot():
+	var b := bullet.instance()
+	b.position = position
+	owner.add_child(b)
+	b.change_side(side_position)

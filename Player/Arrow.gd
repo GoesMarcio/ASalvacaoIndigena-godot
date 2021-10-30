@@ -1,4 +1,4 @@
-extends KinematicBody2D
+extends Area2D
 
 
 onready var sprite := $AnimatedSprite
@@ -6,8 +6,9 @@ onready var sprite := $AnimatedSprite
 # var a = 2
 # var b = "text"
 
+var speed = 500
+
 var side_position = Vector2(1, 0)
-var velocity := Vector2()
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -24,6 +25,28 @@ func change_side(side):
 	if(side == Vector2(0,-1)):
 		sprite.play("up")
 
+#func _physics_process(delta):
+#	position = position + (side_position * 5)
+
+
 func _physics_process(delta):
-	position = position + (side_position * 5)
-	
+	position += side_position * speed * delta
+
+func _on_Arrow_body_entered(body):
+	if body.is_in_group("enemy"):
+		body.queue_free()
+		queue_free()
+		
+	if body.is_in_group("struct"):
+		stuck(side_position)
+		side_position = Vector2(0,0)
+
+func stuck(side):
+	if(side == Vector2(1,0)):
+		sprite.play("stuck_right")
+	if(side == Vector2(-1,0)):
+		sprite.play("stuck_left")
+	if(side == Vector2(0,1)):
+		sprite.play("stuck_down")
+	if(side == Vector2(0,-1)):
+		sprite.play("stuck_up")
