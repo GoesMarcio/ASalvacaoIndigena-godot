@@ -7,7 +7,8 @@ extends KinematicBody2D
 
 export var run_speed := 80
 
-onready var target := get_tree().get_root().get_node("/root/Game/Tribe/YSort/Player")
+#onready var target := get_tree().get_root().get_node("/root/Game/Beach/YSort/Player")
+onready var target := get_tree().get_root().get_node("/root/Beach/YSort/Player")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -22,9 +23,12 @@ func _physics_process(delta):
 
 
 func follow_player(delta):
+	if target == null:
+		return
+		
 	var distance = sqrt(pow(target.position.x-position.x, 2) + pow(target.position.y-position.y,2))
 	
-	if(distance > 50):
+	if(distance > 150):
 		var direction = (target.position - position).normalized()
 		print(direction)
 		move_and_slide(direction * run_speed, Vector2.UP)

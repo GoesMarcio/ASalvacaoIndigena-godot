@@ -12,6 +12,8 @@ var side_position = Vector2(1, 0)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	print(get_parent())
+	print(get_parent().name)
 	pass # Replace with function body.
 
 func change_side(side):
@@ -34,6 +36,7 @@ func _physics_process(delta):
 
 func _on_Arrow_body_entered(body):
 	if body.is_in_group("enemy"):
+		print(body)
 		body.queue_free()
 		queue_free()
 		

@@ -66,5 +66,5 @@ func _physics_process(delta):
 func shoot():
 	var b := bullet.instance()
 	b.position = position
-	owner.add_child(b)
+	get_parent().add_child(b)
 	b.change_side(side_position)
