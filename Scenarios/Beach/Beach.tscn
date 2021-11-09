@@ -37,7 +37,7 @@ func follow_player(delta):
 	
 	if(distance > 150):
 		var direction = (target.position - position).normalized()
-		print(direction)
+		#print(direction)
 		move_and_slide(direction * run_speed, Vector2.UP)
 "
 
@@ -54,6 +54,7 @@ tile_data = PoolIntArray( -65526, 91, 0, -65524, 91, 0, -65522, 91, 0, -65520, 9
 [node name="Player" parent="YSort" instance=ExtResource( 2 )]
 position = Vector2( 157.33, 214.957 )
 run_speed = 200
+sprite_arrow = "yes"
 
 [node name="Camera2D" type="Camera2D" parent="YSort/Player"]
 current = true

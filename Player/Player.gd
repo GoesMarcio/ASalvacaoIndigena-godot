@@ -5,6 +5,7 @@ class_name Player
 export var run_speed := 150
 export var gravity := 35
 export var turn := 'down'
+export var sprite_arrow := 'no'
 
 onready var sprite := $AnimatedSprite
 onready var life := 100
@@ -17,16 +18,16 @@ var velocity := Vector2()
 
 func _ready() -> void:
 	if turn == 'up':
-		sprite.play('up')
+		sprite.play(sprite_arrow + '_up')
 		sprite.stop()
 	elif turn == 'right':
-		sprite.play('right')
+		sprite.play(sprite_arrow + '_right')
 		sprite.stop()
 	elif turn == 'left':
-		sprite.play('left')
+		sprite.play(sprite_arrow + '_left')
 		sprite.stop()
 	else:
-		sprite.play('down')
+		sprite.play(sprite_arrow + '_down')
 		sprite.stop()
 
 	
@@ -41,22 +42,22 @@ func get_input_side():
 		get_tree().call_group("Life_HUD", "update_life", life)
 	
 	if velocity.x > 0:
-		sprite.play("right")
+		sprite.play(sprite_arrow + "_right")
 		side_position = Vector2(1,0)
 	elif velocity.x < 0:
-		sprite.play("left")
+		sprite.play(sprite_arrow + "_left")
 		side_position = Vector2(-1,0)
 	elif velocity.y > 0:
-		sprite.play("down")
+		sprite.play(sprite_arrow + "_down")
 		side_position = Vector2(0,1)
 	elif velocity.y < 0:
-		sprite.play("up")
+		sprite.play(sprite_arrow + "_up")
 		side_position = Vector2(0,-1)
 	else:
 		sprite.stop()
 		
 	# Arrow
-	if Input.is_action_just_pressed("space"):
+	if sprite_arrow == "yes" and Input.is_action_just_pressed("space"):
 		shoot()
 
 func _physics_process(delta):

@@ -1,8 +1,9 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenarios/City/City.tres" type="TileSet" id=2]
 [ext_resource path="res://Scenarios/Tribe/Tribe2.tres" type="TileSet" id=3]
+[ext_resource path="res://Scenarios/Elements/ArrowAndBow.tscn" type="PackedScene" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 87.712, 80.0063 )
@@ -55,7 +56,7 @@ tile_data = PoolIntArray( 0, 23, 0, 1, 38, 0, 5, 38, 0, 65536, 24, 0, 131072, 23
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Node2D/praia/StaticBody2D"]
 build_mode = 1
-polygon = PoolVector2Array( 10.993, 0.0841889, 126.724, 0.174877, 127.765, 122.914, 63.9937, 151.455, 127.616, 123.063, 127.984, 0.80484, 2047.52, 0.328064, 2048.58, 1215.09, 126.248, 1209.09, 126.248, 191.743, 127.666, 161.378, 64.5318, 192.327, 126.25, 192, 128.488, 1248.61, 8.6396, 1248.61, 10.993, 0.025197 )
+polygon = PoolVector2Array( 10.993, 0.0841889, 126.724, 0.174877, 127.765, 122.914, 71.4453, 151.055, 127.616, 123.063, 127.984, 0.80484, 2047.52, 0.328064, 2048.58, 1215.09, 126.248, 1209.09, 126.248, 191.743, 127.666, 161.378, 71.8907, 191.145, 126.25, 192, 128.488, 1248.61, 8.6396, 1248.61, 10.993, 0.025197 )
 
 [node name="Mapa" type="TileMap" parent="Node2D"]
 scale = Vector2( 2, 2 )
@@ -128,6 +129,8 @@ shape = SubResource( 6 )
 position = Vector2( 407.721, 487.077 )
 shape = SubResource( 2 )
 
+[node name="bow" parent="Node2D" instance=ExtResource( 4 )]
+
 [node name="YSort" type="YSort" parent="Node2D"]
 
 [node name="down" type="StaticBody2D" parent="Node2D/YSort"]
@@ -174,7 +177,6 @@ position = Vector2( 640.048, 447.712 )
 shape = SubResource( 12 )
 
 [node name="Node2D" type="StaticBody2D" parent="Node2D/YSort"]
-visible = false
 light_mask = 0
 
 [node name="Prédios" type="TileMap" parent="Node2D/YSort/Node2D"]
@@ -200,7 +202,7 @@ scale = Vector2( 2, 2 )
 shape = SubResource( 1 )
 
 [node name="Player" parent="Node2D/YSort" instance=ExtResource( 1 )]
-position = Vector2( 430.671, 509.488 )
+position = Vector2( 77.3759, 536.096 )
 run_speed = 200
 
 [node name="Camera2D" type="Camera2D" parent="Node2D/YSort/Player"]
