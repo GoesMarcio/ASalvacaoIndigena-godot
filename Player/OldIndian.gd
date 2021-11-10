@@ -14,4 +14,4 @@ func _on_OldIndian_body_exited(body: Node) -> void:
 func _physics_process(delta: float) -> void:
 	# Dialog
 	if dialog.visible and Input.is_action_just_pressed("space"):
-		root.add_child(root.dialog.instance())
+		root.add_child(root.dialog)
