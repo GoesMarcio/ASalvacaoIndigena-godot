@@ -9,7 +9,6 @@ func _on_OldIndian_body_entered(body: Node) -> void:
 		dialog.visible = true
 
 
-
 func _on_OldIndian_body_exited(body: Node) -> void:
 	dialog.visible = false
 	

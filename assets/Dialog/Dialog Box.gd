@@ -17,7 +17,6 @@ func _ready():
 		dialog = ['que tu quer aqui dnv fdp',
 		'larga da volta pnc'
 		]
-		
 	
 func _process(delta: float) -> void:
 	$"next-phase".visible = finished
@@ -36,6 +35,7 @@ func load_dialog():
 		)
 		$Tween.start()
 		dialog_index += 1
+		get_tree().call_group('Player', 'change_can_move', false)
 	else:
 		self.visible = false
 		finished = false
@@ -47,6 +47,8 @@ func load_dialog():
 		if !root.story.has("talked"):
 			root.story.append("talked")
 		dialog_index = 0
+		
+		get_tree().call_group('Player', 'change_can_move', true)
 
 
 func _on_Tween_tween_completed(object: Object, key: NodePath) -> void:

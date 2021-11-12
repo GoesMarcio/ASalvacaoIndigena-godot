@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/heart.png-4ab881a2b0320a1b86af5b398384a890.stex"
+path="res://.import/char_indian_without_bow(old).png-a74ac421d599c21544660680596e2090.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Images/heart.png"
-dest_files=[ "res://.import/heart.png-4ab881a2b0320a1b86af5b398384a890.stex" ]
+source_file="res://Player/char_indian_without_bow(old).png"
+dest_files=[ "res://.import/char_indian_without_bow(old).png-a74ac421d599c21544660680596e2090.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

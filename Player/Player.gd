@@ -9,6 +9,7 @@ export var sprite_arrow := 'no'
 
 onready var sprite := $AnimatedSprite
 onready var life := 100
+onready var can_move := true
 
 onready var bullet := preload("res://Player/Arrow.tscn")
 #export (PackedScene) var bullet : PackedScene
@@ -33,6 +34,9 @@ func _ready() -> void:
 	
 # Movimento lateral com gravidade
 func get_input_side():
+	if !can_move:
+		return
+	
 	velocity.x = Input.get_action_strength("ui_right")-Input.get_action_strength("ui_left")
 	velocity.y = Input.get_action_strength("ui_down")-Input.get_action_strength("ui_up")
 	velocity = velocity.normalized() * run_speed
@@ -69,3 +73,6 @@ func shoot():
 	b.position = position
 	get_parent().add_child(b)
 	b.change_side(side_position)
+
+func change_can_move(can):
+	can_move = can

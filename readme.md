@@ -4,10 +4,10 @@ Breve descrição...
 
 ## Todo List:
 - Tribe:
-    - Tempo
-    - Bloquear passagem ponte
+    - ~~Tempo~~
+    - ~~Bloquear passagem ponte~~
 - Indoors:
-    - Parar movimentação boneco
+    - ~~Parar movimentação boneco~~
     - Setar diálogos corretos
     - Liberar HUD com vida
 - City:
