@@ -17,7 +17,10 @@ Breve descrição...
     - Sortear itens pelo mapa
     - Volta no tempo
 - Volta no tempo:
-    - Inimigos no geral (movimentação, tiros, etc)
+    - Inimigos:
+        - ~~Movimentação~~ (em andamento)
+        - Tiros
+        - Outros...
     - Inimigos no mapa
     - Obstáculos no mapa
 - Outros:

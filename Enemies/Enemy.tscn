@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Enemies/enemy_test.png" type="Texture" id=1]
 [ext_resource path="res://Enemies/Enemy.gd" type="Script" id=2]
 
 [sub_resource type="AtlasTexture" id=1]
-flags = 4
 atlas = ExtResource( 1 )
 region = Rect2( 0, 300, 33, 60 )
 
@@ -19,6 +18,9 @@ animations = [ {
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 16.0475, 30.044 )
 
+[sub_resource type="CircleShape2D" id=4]
+radius = 277.18
+
 [node name="Enemy" type="KinematicBody2D" groups=[
 "enemy",
 ]]
@@ -29,3 +31,15 @@ frames = SubResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 3 )
+
+[node name="Line2D" type="Line2D" parent="."]
+width = 2.0
+
+[node name="Area2D" type="Area2D" parent="."]
+light_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource( 4 )
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_Area2D_body_exited"]

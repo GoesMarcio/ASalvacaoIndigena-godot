@@ -2,8 +2,8 @@
 
 [ext_resource path="res://Fonts/NanumPenScript-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://assets/Images/HUD/bg_life.png" type="Texture" id=2]
-[ext_resource path="res://HUD.gd" type="Script" id=3]
-[ext_resource path="res://LifeSprite.gd" type="Script" id=4]
+[ext_resource path="res://HUD/HUD.gd" type="Script" id=3]
+[ext_resource path="res://HUD/LifeSprite.gd" type="Script" id=4]
 
 [sub_resource type="DynamicFont" id=1]
 size = 24
@@ -11,11 +11,11 @@ font_data = ExtResource( 1 )
 
 [sub_resource type="AtlasTexture" id=2]
 atlas = ExtResource( 2 )
-region = Rect2( 0, 0, 236, 32 )
+region = Rect2( 0, 64, 236, 32 )
 
 [sub_resource type="AtlasTexture" id=3]
 atlas = ExtResource( 2 )
-region = Rect2( 0, 64, 236, 32 )
+region = Rect2( 0, 32, 236, 32 )
 
 [sub_resource type="AtlasTexture" id=4]
 atlas = ExtResource( 2 )
@@ -23,23 +23,23 @@ region = Rect2( 0, 128, 236, 32 )
 
 [sub_resource type="AtlasTexture" id=5]
 atlas = ExtResource( 2 )
-region = Rect2( 0, 96, 236, 32 )
+region = Rect2( 0, 0, 236, 32 )
 
 [sub_resource type="AtlasTexture" id=6]
 atlas = ExtResource( 2 )
-region = Rect2( 0, 32, 236, 32 )
+region = Rect2( 0, 160, 236, 32 )
 
 [sub_resource type="AtlasTexture" id=7]
 atlas = ExtResource( 2 )
-region = Rect2( 0, 160, 236, 32 )
+region = Rect2( 0, 96, 236, 32 )
 
 [sub_resource type="AtlasTexture" id=8]
 atlas = ExtResource( 2 )
-region = Rect2( 0, 192, 236, 32 )
+region = Rect2( 0, 224, 236, 32 )
 
 [sub_resource type="AtlasTexture" id=9]
 atlas = ExtResource( 2 )
-region = Rect2( 0, 288, 236, 32 )
+region = Rect2( 0, 192, 236, 32 )
 
 [sub_resource type="AtlasTexture" id=10]
 atlas = ExtResource( 2 )
@@ -47,22 +47,22 @@ region = Rect2( 0, 320, 236, 32 )
 
 [sub_resource type="AtlasTexture" id=11]
 atlas = ExtResource( 2 )
-region = Rect2( 0, 256, 236, 32 )
+region = Rect2( 0, 288, 236, 32 )
 
 [sub_resource type="AtlasTexture" id=12]
 atlas = ExtResource( 2 )
-region = Rect2( 0, 224, 236, 32 )
+region = Rect2( 0, 256, 236, 32 )
 
 [sub_resource type="SpriteFrames" id=13]
 animations = [ {
 "frames": [ SubResource( 2 ) ],
 "loop": true,
-"name": "0",
+"name": "2",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 3 ) ],
 "loop": true,
-"name": "2",
+"name": "1",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 4 ) ],
@@ -72,27 +72,27 @@ animations = [ {
 }, {
 "frames": [ SubResource( 5 ) ],
 "loop": true,
-"name": "3",
+"name": "0",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 6 ) ],
 "loop": true,
-"name": "1",
+"name": "5",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 7 ) ],
 "loop": true,
-"name": "5",
+"name": "3",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 8 ) ],
 "loop": true,
-"name": "6",
+"name": "7",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 9 ) ],
 "loop": true,
-"name": "9",
+"name": "6",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 10 ) ],
@@ -102,12 +102,12 @@ animations = [ {
 }, {
 "frames": [ SubResource( 11 ) ],
 "loop": true,
-"name": "8",
+"name": "9",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 12 ) ],
 "loop": true,
-"name": "7",
+"name": "8",
 "speed": 5.0
 } ]
 
