@@ -4,12 +4,16 @@
 [ext_resource path="res://assets/Tilesets/bridge1.png" type="Texture" id=2]
 [ext_resource path="res://assets/Tilesets/terrain_atlas.png" type="Texture" id=3]
 
+[sub_resource type="NavigationPolygon" id=1]
+vertices = PoolVector2Array( 64, 96, 0, 96, 0, 0, 64, 0 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+
 [sub_resource type="NavigationPolygon" id=2]
 vertices = PoolVector2Array( 64, 96, 0, 96, 0, 0, 64, 0 )
 polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 
 [sub_resource type="NavigationPolygon" id=3]
-vertices = PoolVector2Array( 64, 96, 0, 96, 0, 0, 64, 0 )
+vertices = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 
 [sub_resource type="NavigationPolygon" id=4]
@@ -57,19 +61,7 @@ vertices = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 
 [sub_resource type="NavigationPolygon" id=15]
-vertices = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
-polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
-
-[sub_resource type="NavigationPolygon" id=24]
 vertices = PoolVector2Array( 0, 0, 16, 0, 16, 32, 0, 32 )
-polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
-
-[sub_resource type="NavigationPolygon" id=25]
-vertices = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
-polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
-
-[sub_resource type="NavigationPolygon" id=26]
-vertices = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 
 [sub_resource type="NavigationPolygon" id=16]
@@ -96,11 +88,19 @@ polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 vertices = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 
+[sub_resource type="NavigationPolygon" id=22]
+vertices = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+
 [sub_resource type="NavigationPolygon" id=23]
+vertices = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+
+[sub_resource type="NavigationPolygon" id=24]
 vertices = PoolVector2Array( 0, 0, 32, 0, 32, 16, 0, 16 )
 polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 
-[sub_resource type="NavigationPolygon" id=27]
+[sub_resource type="NavigationPolygon" id=25]
 vertices = PoolVector2Array( 64, 96, 0, 96, 0, 0, 64, 0 )
 polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 
@@ -562,7 +562,7 @@ resource_local_to_scene = true
 38/tile_mode = 0
 38/occluder_offset = Vector2( 0, 0 )
 38/navigation_offset = Vector2( 0, 0 )
-38/navigation = SubResource( 2 )
+38/navigation = SubResource( 1 )
 38/shape_offset = Vector2( 0, 0 )
 38/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 38/shape_one_way = false
@@ -577,7 +577,7 @@ resource_local_to_scene = true
 39/tile_mode = 0
 39/occluder_offset = Vector2( 0, 0 )
 39/navigation_offset = Vector2( 0, 0 )
-39/navigation = SubResource( 3 )
+39/navigation = SubResource( 2 )
 39/shape_offset = Vector2( 0, 0 )
 39/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 39/shape_one_way = false
@@ -774,7 +774,7 @@ resource_local_to_scene = true
 54/tile_mode = 0
 54/occluder_offset = Vector2( 0, 0 )
 54/navigation_offset = Vector2( 0, 0 )
-54/navigation = SubResource( 4 )
+54/navigation = SubResource( 3 )
 54/shape_offset = Vector2( 0, 0 )
 54/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 54/shape_one_way = false
@@ -789,7 +789,7 @@ resource_local_to_scene = true
 56/tile_mode = 0
 56/occluder_offset = Vector2( 0, 0 )
 56/navigation_offset = Vector2( 0, 0 )
-56/navigation = SubResource( 5 )
+56/navigation = SubResource( 4 )
 56/shape_offset = Vector2( 0, 0 )
 56/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 56/shape_one_way = false
@@ -804,7 +804,7 @@ resource_local_to_scene = true
 58/tile_mode = 0
 58/occluder_offset = Vector2( 0, 0 )
 58/navigation_offset = Vector2( 0, 0 )
-58/navigation = SubResource( 6 )
+58/navigation = SubResource( 5 )
 58/shape_offset = Vector2( 0, 0 )
 58/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 58/shape_one_way = false
@@ -819,7 +819,7 @@ resource_local_to_scene = true
 60/tile_mode = 0
 60/occluder_offset = Vector2( 0, 0 )
 60/navigation_offset = Vector2( 0, 0 )
-60/navigation = SubResource( 7 )
+60/navigation = SubResource( 6 )
 60/shape_offset = Vector2( 0, 0 )
 60/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 60/shape_one_way = false
@@ -834,7 +834,7 @@ resource_local_to_scene = true
 61/tile_mode = 0
 61/occluder_offset = Vector2( 0, 0 )
 61/navigation_offset = Vector2( 0, 0 )
-61/navigation = SubResource( 8 )
+61/navigation = SubResource( 7 )
 61/shape_offset = Vector2( 0, 0 )
 61/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 61/shape_one_way = false
@@ -849,7 +849,7 @@ resource_local_to_scene = true
 62/tile_mode = 0
 62/occluder_offset = Vector2( 0, 0 )
 62/navigation_offset = Vector2( 0, 0 )
-62/navigation = SubResource( 9 )
+62/navigation = SubResource( 8 )
 62/shape_offset = Vector2( 0, 0 )
 62/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 62/shape_one_way = false
@@ -864,7 +864,7 @@ resource_local_to_scene = true
 63/tile_mode = 0
 63/occluder_offset = Vector2( 0, 0 )
 63/navigation_offset = Vector2( 0, 0 )
-63/navigation = SubResource( 10 )
+63/navigation = SubResource( 9 )
 63/shape_offset = Vector2( 0, 0 )
 63/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 63/shape_one_way = false
@@ -879,7 +879,7 @@ resource_local_to_scene = true
 64/tile_mode = 0
 64/occluder_offset = Vector2( 0, 0 )
 64/navigation_offset = Vector2( 0, 0 )
-64/navigation = SubResource( 11 )
+64/navigation = SubResource( 10 )
 64/shape_offset = Vector2( 0, 0 )
 64/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 64/shape_one_way = false
@@ -894,7 +894,7 @@ resource_local_to_scene = true
 65/tile_mode = 0
 65/occluder_offset = Vector2( 0, 0 )
 65/navigation_offset = Vector2( 0, 0 )
-65/navigation = SubResource( 12 )
+65/navigation = SubResource( 11 )
 65/shape_offset = Vector2( 0, 0 )
 65/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 65/shape_one_way = false
@@ -909,7 +909,7 @@ resource_local_to_scene = true
 66/tile_mode = 0
 66/occluder_offset = Vector2( 0, 0 )
 66/navigation_offset = Vector2( 0, 0 )
-66/navigation = SubResource( 13 )
+66/navigation = SubResource( 12 )
 66/shape_offset = Vector2( 0, 0 )
 66/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 66/shape_one_way = false
@@ -924,7 +924,7 @@ resource_local_to_scene = true
 67/tile_mode = 0
 67/occluder_offset = Vector2( 0, 0 )
 67/navigation_offset = Vector2( 0, 0 )
-67/navigation = SubResource( 14 )
+67/navigation = SubResource( 13 )
 67/shape_offset = Vector2( 0, 0 )
 67/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 67/shape_one_way = false
@@ -939,7 +939,7 @@ resource_local_to_scene = true
 68/tile_mode = 0
 68/occluder_offset = Vector2( 0, 0 )
 68/navigation_offset = Vector2( 0, 0 )
-68/navigation = SubResource( 15 )
+68/navigation = SubResource( 14 )
 68/shape_offset = Vector2( 0, 0 )
 68/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 68/shape_one_way = false
@@ -954,7 +954,7 @@ resource_local_to_scene = true
 69/tile_mode = 0
 69/occluder_offset = Vector2( 0, 0 )
 69/navigation_offset = Vector2( 0, 0 )
-69/navigation = SubResource( 24 )
+69/navigation = SubResource( 15 )
 69/shape_offset = Vector2( 0, 0 )
 69/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 69/shape_one_way = false
@@ -969,7 +969,7 @@ resource_local_to_scene = true
 70/tile_mode = 0
 70/occluder_offset = Vector2( 0, 0 )
 70/navigation_offset = Vector2( 0, 0 )
-70/navigation = SubResource( 25 )
+70/navigation = SubResource( 16 )
 70/shape_offset = Vector2( 0, 0 )
 70/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 70/shape_one_way = false
@@ -984,7 +984,7 @@ resource_local_to_scene = true
 71/tile_mode = 0
 71/occluder_offset = Vector2( 0, 0 )
 71/navigation_offset = Vector2( 0, 0 )
-71/navigation = SubResource( 26 )
+71/navigation = SubResource( 17 )
 71/shape_offset = Vector2( 0, 0 )
 71/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 71/shape_one_way = false
@@ -999,7 +999,7 @@ resource_local_to_scene = true
 72/tile_mode = 0
 72/occluder_offset = Vector2( 0, 0 )
 72/navigation_offset = Vector2( 0, 0 )
-72/navigation = SubResource( 16 )
+72/navigation = SubResource( 18 )
 72/shape_offset = Vector2( 0, 0 )
 72/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 72/shape_one_way = false
@@ -1014,7 +1014,7 @@ resource_local_to_scene = true
 73/tile_mode = 0
 73/occluder_offset = Vector2( 0, 0 )
 73/navigation_offset = Vector2( 0, 0 )
-73/navigation = SubResource( 17 )
+73/navigation = SubResource( 19 )
 73/shape_offset = Vector2( 0, 0 )
 73/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 73/shape_one_way = false
@@ -1029,7 +1029,7 @@ resource_local_to_scene = true
 74/tile_mode = 0
 74/occluder_offset = Vector2( 0, 0 )
 74/navigation_offset = Vector2( 0, 0 )
-74/navigation = SubResource( 18 )
+74/navigation = SubResource( 20 )
 74/shape_offset = Vector2( 0, 0 )
 74/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 74/shape_one_way = false
@@ -1044,7 +1044,7 @@ resource_local_to_scene = true
 75/tile_mode = 0
 75/occluder_offset = Vector2( 0, 0 )
 75/navigation_offset = Vector2( 0, 0 )
-75/navigation = SubResource( 19 )
+75/navigation = SubResource( 21 )
 75/shape_offset = Vector2( 0, 0 )
 75/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 75/shape_one_way = false
@@ -1059,7 +1059,7 @@ resource_local_to_scene = true
 76/tile_mode = 0
 76/occluder_offset = Vector2( 0, 0 )
 76/navigation_offset = Vector2( 0, 0 )
-76/navigation = SubResource( 20 )
+76/navigation = SubResource( 22 )
 76/shape_offset = Vector2( 0, 0 )
 76/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 76/shape_one_way = false
@@ -1074,7 +1074,7 @@ resource_local_to_scene = true
 77/tile_mode = 0
 77/occluder_offset = Vector2( 0, 0 )
 77/navigation_offset = Vector2( 0, 0 )
-77/navigation = SubResource( 21 )
+77/navigation = SubResource( 23 )
 77/shape_offset = Vector2( 0, 0 )
 77/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 77/shape_one_way = false
@@ -1089,7 +1089,7 @@ resource_local_to_scene = true
 79/tile_mode = 0
 79/occluder_offset = Vector2( 0, 0 )
 79/navigation_offset = Vector2( 0, 0 )
-79/navigation = SubResource( 23 )
+79/navigation = SubResource( 24 )
 79/shape_offset = Vector2( 0, 0 )
 79/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 79/shape_one_way = false
@@ -1258,7 +1258,7 @@ resource_local_to_scene = true
 97/tile_mode = 0
 97/occluder_offset = Vector2( 0, 0 )
 97/navigation_offset = Vector2( 0, 0 )
-97/navigation = SubResource( 27 )
+97/navigation = SubResource( 25 )
 97/shape_offset = Vector2( 0, 0 )
 97/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 97/shape_one_way = false
