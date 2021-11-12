@@ -3,12 +3,22 @@
 Breve descrição...
 
 ## Todo List:
-- Tileset da cena na praia
-- Tiro do player
-- Diálogo
-- Encontrar itens
-- Volta no passado
-- Sprites do player
-- Inimigos
-- Tiro do inimigo
-- Volta no futuro
+- Tribe:
+    - Tempo
+    - Bloquear passagem ponte
+- Indoors:
+    - Parar movimentação boneco
+    - Setar diálogos corretos
+    - Liberar HUD com vida
+- City:
+    - Policial
+    - YSort
+    - Terminar prédios e ambientes internos
+    - Sortear itens pelo mapa
+    - Volta no tempo
+- Volta no tempo:
+    - Inimigos no geral (movimentação, tiros, etc)
+    - Inimigos no mapa
+    - Obstáculos no mapa
+- Outros:
+    - Sons nos ambientes e movimentos

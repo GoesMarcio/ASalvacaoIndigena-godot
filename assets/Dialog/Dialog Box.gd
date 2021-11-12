@@ -1,5 +1,7 @@
 extends Control
 
+onready var root = get_node("/root/Game")
+
 var dialog = [
 	'oien',
 	'fala tu padrinho',
@@ -10,8 +12,12 @@ var dialog = [
 var dialog_index = 0
 var finished = false
 
-func _ready() -> void:
-	load_dialog()
+func _ready():
+	if root.story.has("talked"):
+		dialog = ['que tu quer aqui dnv fdp',
+		'larga da volta pnc'
+		]
+		
 	
 func _process(delta: float) -> void:
 	$"next-phase".visible = finished
@@ -37,6 +43,9 @@ func load_dialog():
 		dialog = ['que tu quer aqui dnv fdp',
 		'larga da volta pnc'
 		]
+		
+		if !root.story.has("talked"):
+			root.story.append("talked")
 		dialog_index = 0
 
 

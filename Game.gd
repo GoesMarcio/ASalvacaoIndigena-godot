@@ -4,7 +4,9 @@ var position_player = Vector2()
 var hut = preload("res://Scenarios/Tribe/Indoors/Indoors.tscn")
 var tribe = preload("res://Scenarios/Tribe/Tribe2.tscn")
 var city = preload("res://Scenarios/City/City_collision.tscn")
-var dialog = preload("res://assets/Dialog/Dialog.tscn").instance()
+var dialog = preload("res://assets/Dialog/Dialog.tscn")
+
+onready var story := []
 
 func save_player_pos(position):
 	position_player = position

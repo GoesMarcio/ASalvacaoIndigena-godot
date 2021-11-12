@@ -5,10 +5,10 @@
 [ext_resource path="res://Fonts/Xolonium-Regular.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://assets/Images/bkg_dialogue.png" type="Texture" id=4]
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 25.1758, 52.0425 )
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="DynamicFont" id=2]
 font_data = ExtResource( 3 )
 
 [node name="OldIndian" type="Area2D"]
@@ -26,7 +26,7 @@ polygon = PoolVector2Array( 7.08292, 54.8873, 10.9776, 40.7213, 0.0828323, 37.71
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
 position = Vector2( -0.236191, 1.34445 )
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="Dialog Box" type="Control" parent="."]
 visible = false
@@ -55,7 +55,7 @@ margin_left = 10.9432
 margin_top = -0.233879
 margin_right = -10.0568
 margin_bottom = -0.233879
-custom_fonts/normal_font = SubResource( 1 )
+custom_fonts/normal_font = SubResource( 2 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_selected = Color( 0, 0, 0, 1 )
 bbcode_enabled = true
