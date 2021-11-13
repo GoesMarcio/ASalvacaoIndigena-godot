@@ -35,6 +35,7 @@ func _physics_process(delta):
 	position += side_position * speed * delta
 
 func _on_Arrow_body_entered(body):
+	print(body.name)
 	if body.is_in_group("enemy"):
 		print(body)
 		body.queue_free()
@@ -53,3 +54,11 @@ func stuck(side):
 		sprite.play("stuck_down")
 	if(side == Vector2(0,-1)):
 		sprite.play("stuck_up")
+
+
+func _on_Arrow_area_entered(area):
+	if area.is_in_group("Statue"):
+		var root = get_node("/root/Game")	
+		root.add_child(root.beach.instance())
+		var city = get_node("/root/Game/City")
+		city.queue_free()

@@ -2,6 +2,7 @@ extends Area2D
 
 onready var dialog := $"Dialog Box"
 onready var root = get_node("/root/Game")
+onready var hut = get_node("/root/Game/Hut")
 onready var di = root.dialog.instance()
 
 func _on_OldIndian_body_entered(body: Node) -> void:
@@ -15,4 +16,4 @@ func _on_OldIndian_body_exited(body: Node) -> void:
 func _physics_process(delta: float) -> void:
 	# Dialog
 	if dialog.visible and Input.is_action_just_pressed("space"):
-		root.add_child(di)
+		hut.add_child(di)

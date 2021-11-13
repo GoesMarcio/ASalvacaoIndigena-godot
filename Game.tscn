@@ -1,11 +1,18 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://MainMenu.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Game.gd" type="Script" id=2]
 [ext_resource path="res://Fonts/Xolonium-Regular.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://Timer.gd" type="Script" id=4]
+[ext_resource path="res://HUD/HUD.tscn" type="PackedScene" id=5]
 
 [sub_resource type="ShaderMaterial" id=1]
+
+[sub_resource type="StyleBoxFlat" id=3]
+corner_radius_top_left = 7
+corner_radius_top_right = 7
+corner_radius_bottom_right = 7
+corner_radius_bottom_left = 7
 
 [sub_resource type="DynamicFont" id=2]
 size = 24
@@ -19,19 +26,37 @@ material = SubResource( 1 )
 
 [node name="Canvas" type="CanvasLayer" parent="."]
 
-[node name="Timer" type="Label" parent="Canvas" groups=[
+[node name="Life" parent="Canvas" instance=ExtResource( 5 )]
+visible = false
+
+[node name="Panel" type="Panel" parent="Canvas"]
+visible = false
+self_modulate = Color( 0, 0, 0, 0.627451 )
+margin_left = 681.21
+margin_top = 13.7568
+margin_right = 1012.21
+margin_bottom = 63.7568
+custom_styles/panel = SubResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Timer" type="Label" parent="Canvas/Panel" groups=[
 "hud",
 ]]
-visible = false
-margin_left = 690.0
-margin_top = 20.0
-margin_right = 998.0
-margin_bottom = 51.0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -154.0
+margin_top = -15.5
+margin_right = 154.0
+margin_bottom = 15.5
 custom_fonts/font = SubResource( 2 )
-custom_colors/font_color = Color( 0.85098, 0.32549, 0.309804, 1 )
+custom_colors/font_color = Color( 1, 0.14902, 0.27451, 1 )
 text = "Tempo  restante: 00:00"
 align = 2
 script = ExtResource( 4 )
 __meta__ = {
-"_edit_use_anchors_": true
+"_edit_use_anchors_": false
 }

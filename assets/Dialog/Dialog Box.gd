@@ -1,6 +1,7 @@
 extends Control
 
 onready var root = get_node("/root/Game")
+onready var oldIndian = get_node("/root/Game/Hut/YSort/OldIndian")
 
 var dialog = [
 	'oien',
@@ -20,7 +21,7 @@ func _ready():
 	
 func _process(delta: float) -> void:
 	$"next-phase".visible = finished
-	if Input.is_action_just_pressed("space"):
+	if oldIndian.dialog.visible and Input.is_action_just_pressed("space"):
 		load_dialog()
 	
 func load_dialog():
@@ -46,6 +47,8 @@ func load_dialog():
 		
 		if !root.story.has("talked"):
 			root.story.append("talked")
+			get_tree().call_group('hud', 'startTimer')
+			get_tree().call_group('Life', 'changeVisible', true)
 		dialog_index = 0
 		
 		get_tree().call_group('Player', 'change_can_move', true)

@@ -35,6 +35,7 @@ func _ready() -> void:
 # Movimento lateral com gravidade
 func get_input_side():
 	if !can_move:
+		sprite.stop()
 		return
 	
 	velocity.x = Input.get_action_strength("ui_right")-Input.get_action_strength("ui_left")
@@ -43,7 +44,7 @@ func get_input_side():
 	
 	if velocity.x != 0:
 		life -= abs(velocity.x/1000)
-		get_tree().call_group("Life_HUD", "update_life", life)
+		get_tree().call_group("Life", "update_life", life)
 	
 	if velocity.x > 0:
 		sprite.play(sprite_arrow + "_right")
@@ -65,6 +66,9 @@ func get_input_side():
 		shoot()
 
 func _physics_process(delta):
+	if !can_move:
+		sprite.stop()
+		return
 	get_input_side()
 	velocity = move_and_slide(velocity, Vector2.UP)
 

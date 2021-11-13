@@ -3,7 +3,7 @@ extends Label
 onready var time := 60.0
 
 func startTimer():
-	visible = true
+	get_parent().visible = true
 
 func updateTime(delta):
 	if visible:

@@ -10,9 +10,7 @@ func _physics_process(delta: float) -> void:
 		var root = get_node("/root/Game")	
 		root.add_child(root.tribe.instance())
 		
-		var tribe = get_node("/root/Game/Tribe")	
+		var tribe = get_node("/root/Game/Tribe")
 		root.return_player_position(tribe, Vector2(0,-20), 'down')
-		
-		get_tree().call_group('hud', 'startTimer')
 		
 		self.queue_free()

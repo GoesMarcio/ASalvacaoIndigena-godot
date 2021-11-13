@@ -9,13 +9,13 @@ Breve descrição...
 - Indoors:
     - ~~Parar movimentação boneco~~
     - Setar diálogos corretos
-    - Liberar HUD com vida
+    - ~~Liberar HUD com vida~~
 - City:
     - Policial
     - YSort
     - Terminar prédios e ambientes internos
     - Sortear itens pelo mapa
-    - Volta no tempo
+    - ~~Volta no tempo~~
 - Volta no tempo:
     - Inimigos:
         - ~~Movimentação~~ (em andamento)
