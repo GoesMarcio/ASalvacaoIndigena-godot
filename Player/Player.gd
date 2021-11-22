@@ -42,10 +42,6 @@ func get_input_side():
 	velocity.y = Input.get_action_strength("ui_down")-Input.get_action_strength("ui_up")
 	velocity = velocity.normalized() * run_speed
 	
-	if velocity.x != 0:
-		life -= abs(velocity.x/1000)
-		get_tree().call_group("Life", "update_life", life)
-	
 	if velocity.x > 0:
 		sprite.play(sprite_arrow + "_right")
 		side_position = Vector2(1,0)
@@ -63,7 +59,7 @@ func get_input_side():
 		
 	# Arrow
 	if sprite_arrow == "yes" and Input.is_action_just_pressed("space"):
-		shoot()
+		shot()
 
 func _physics_process(delta):
 	if !can_move:
@@ -72,7 +68,7 @@ func _physics_process(delta):
 	get_input_side()
 	velocity = move_and_slide(velocity, Vector2.UP)
 
-func shoot():
+func shot():
 	var b := bullet.instance()
 	b.position = position
 	get_parent().add_child(b)
@@ -80,3 +76,10 @@ func shoot():
 
 func change_can_move(can):
 	can_move = can
+
+
+func receive_shot():
+	life -= 20
+	get_tree().call_group("Life", "update_life", life)
+	if life <= 0:
+		print("morri")

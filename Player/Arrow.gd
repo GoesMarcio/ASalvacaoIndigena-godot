@@ -37,8 +37,8 @@ func _physics_process(delta):
 func _on_Arrow_body_entered(body):
 	print(body.name)
 	if body.is_in_group("enemy"):
-		print(body)
-		body.queue_free()
+		body.receive_shot()
+		#body.queue_free()
 		queue_free()
 		
 	if body.is_in_group("struct"):
@@ -62,3 +62,4 @@ func _on_Arrow_area_entered(area):
 		root.add_child(root.beach.instance())
 		var city = get_node("/root/Game/City")
 		city.queue_free()
+		get_tree().call_group('hud', 'stopTimer')

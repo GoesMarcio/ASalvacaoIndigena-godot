@@ -48,5 +48,29 @@ drag_margin_bottom = 0.4
 editor_draw_limits = true
 editor_draw_drag_margin = true
 
+[node name="Enemy" parent="YSort" instance=ExtResource( 3 )]
+position = Vector2( 245.187, 402.873 )
+
+[node name="Enemy3" parent="YSort" instance=ExtResource( 3 )]
+position = Vector2( 396.507, 117.202 )
+
+[node name="Enemy4" parent="YSort" instance=ExtResource( 3 )]
+position = Vector2( 676.182, 488.799 )
+
+[node name="Enemy5" parent="YSort" instance=ExtResource( 3 )]
+position = Vector2( 454.185, 667.069 )
+
+[node name="Enemy6" parent="YSort" instance=ExtResource( 3 )]
+position = Vector2( 233.87, 751.159 )
+
+[node name="Enemy7" parent="YSort" instance=ExtResource( 3 )]
+position = Vector2( 1111.77, 630.07 )
+
+[node name="Enemy8" parent="YSort" instance=ExtResource( 3 )]
+position = Vector2( 1207.63, 290.347 )
+
+[node name="Enemy9" parent="YSort" instance=ExtResource( 3 )]
+position = Vector2( 967.132, 485.435 )
+
 [node name="Enemy2" parent="YSort" instance=ExtResource( 3 )]
-position = Vector2( 397.311, 260.606 )
+position = Vector2( 695.71, 283.233 )

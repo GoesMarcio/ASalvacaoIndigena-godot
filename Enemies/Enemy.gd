@@ -1,21 +1,36 @@
 extends KinematicBody2D
 
+export var max_life := 100
+var life = max_life
 
 export var run_speed := 80
 var velocity: Vector2 = Vector2.ZERO
 
+enum {
+	MOVE,
+	ATTACK,
+	WAIT
+}
+
+var state := WAIT
 var path: Array = []	# Contains destination positions
 var levelNavigation: Navigation2D = null
 var player = null
 var player_spotted: bool = false
 
 onready var line2d = $Line2D
-onready var los = $RayCast2D
+onready var rc = $RayCast2D
 
-#onready var target := get_tree().get_root().get_node("/root/Game/Beach/YSort/Player")
-onready var target := get_tree().get_root().get_node("/root/Beach/YSort/Player")
+onready var bullet := preload("res://Enemies/Shot.tscn")
+var timer = null
+var can_shot = false
 
 func _ready():
+	timer = get_node("Timer")
+	timer.set_wait_time(2)
+	timer.connect("timeout", self, "on_time_out_complete")
+	timer.start()
+	
 	yield(get_tree(), "idle_frame")
 	var tree = get_tree()
 	if tree.has_group("LevelNavigation"):
@@ -23,61 +38,86 @@ func _ready():
 	if tree.has_group("Player"):
 		player = tree.get_nodes_in_group("Player")[0]
 
-
+func on_time_out_complete():
+	print("atirei")
+	can_shot = true
 
 func _physics_process(delta):
-	#follow_player(delta)
 	line2d.global_position = Vector2.ZERO
 	if player and player_spotted:
 		generate_path()
+	
 	navigate()
 	move()
 
+func check_player_in_detection() -> bool:
+	var collider = rc.get_collider()
+	if collider:
+		print(collider.name)
+		player_spotted = true
+		print("raycast collided")	# Debug purposes
+		return true
+	player_spotted = false
+	return false
 
 
-func navigate():	# Define the next position to go to
+func navigate():
 	if path.size() > 1:
-		#velocity = position.direction_to(path[1]) * run_speed
 		velocity = (path[1] - position).normalized()
 		
-		# If reached the destination, remove this point from path array
 		if euclidean_distance(position, path[0]) < 50:
 			path.pop_front()
 	elif path.size() == 1:
 		velocity = (path[0] - position).normalized()
-		# If reached the destination, remove this point from path array
 		if euclidean_distance(position, path[0]) < 50:
+			state = WAIT
 			path.pop_front()
 	else:
 		velocity = Vector2.ZERO
 
 func generate_path():
 	if levelNavigation != null and player != null:
-		if euclidean_distance(position, player.position) < 150:
-			path = []
+		if euclidean_distance(position, player.position) < 250:
+			state = ATTACK
+			path = [re_distance(position, player.position)]
 			line2d.points = []
 		else:
+			state = MOVE
 			path = levelNavigation.get_simple_path(position, player.position, true)
 			line2d.points = path
 
 func move():
-	move_and_slide(velocity * run_speed, Vector2.UP)
+	match state:
+		MOVE:
+			move_and_slide(velocity * run_speed, Vector2.UP)
+		ATTACK:
+			shot()
 
-func follow_player(delta):
-	if target == null:
-		return
-		
-	var distance = sqrt(pow(target.position.x-position.x, 2) + pow(target.position.y-position.y,2))
-	
-	if(distance > 150):
-		var direction = (target.position - position).normalized()
-		print(direction)
-		move_and_slide(direction * run_speed, Vector2.UP)
-
+func shot():
+	if can_shot:
+		var b := bullet.instance()
+		b.position = position
+		get_parent().add_child(b)
+		b.change_side(direction_shot())
+		can_shot = false
 
 func euclidean_distance(a, b):
 	return sqrt(pow(a.x - b.x, 2) + pow(a.y - b.y, 2))
 
+func check_distance(a, b):
+	if abs(a.x - b.x) < 200:
+		return true
+	if abs(a.y - b.y) < 200:
+		return true
+	return false
+
+
+func re_distance(a, b):
+	if abs(a.x - b.x) < 200:
+		return Vector2(0, b.y)
+	if abs(a.y - b.y) < 200:
+		return Vector2(b.x, 0)
+	return Vector2.ZERO
 
 func _on_Area2D_body_entered(body):
 	if body.name == "Player":
@@ -87,3 +127,24 @@ func _on_Area2D_body_entered(body):
 func _on_Area2D_body_exited(body):
 	if body.name == "Player":
 		player_spotted = false
+
+func receive_shot():
+	life -= 50
+	if(life <= 0):
+		queue_free()
+
+
+func direction_shot():
+	var d = (position - player.position)
+	var a = d.abs()
+	
+	if a.x > a.y:
+		if d.x > 0:
+			return Vector2.LEFT
+		else:
+			return Vector2.RIGHT
+	else:
+		if d.y > 0:
+			return Vector2.UP
+		else:
+			return Vector2.DOWN

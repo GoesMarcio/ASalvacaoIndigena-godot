@@ -5,6 +5,10 @@ onready var time := 60.0
 func startTimer():
 	get_parent().visible = true
 
+func stopTimer():
+	queue_free()
+	get_parent().queue_free()
+
 func updateTime(delta):
 	if visible:
 		time -= delta

@@ -8,13 +8,13 @@
 
 [sub_resource type="ShaderMaterial" id=1]
 
-[sub_resource type="StyleBoxFlat" id=3]
+[sub_resource type="StyleBoxFlat" id=2]
 corner_radius_top_left = 7
 corner_radius_top_right = 7
 corner_radius_bottom_right = 7
 corner_radius_bottom_left = 7
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=3]
 size = 24
 font_data = ExtResource( 3 )
 
@@ -36,7 +36,7 @@ margin_left = 681.21
 margin_top = 13.7568
 margin_right = 1012.21
 margin_bottom = 63.7568
-custom_styles/panel = SubResource( 3 )
+custom_styles/panel = SubResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -52,7 +52,7 @@ margin_left = -154.0
 margin_top = -15.5
 margin_right = 154.0
 margin_bottom = 15.5
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 1, 0.14902, 0.27451, 1 )
 text = "Tempo  restante: 00:00"
 align = 2

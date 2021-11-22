@@ -1,39 +1,39 @@
 [gd_scene load_steps=14 format=2]
 
-[ext_resource path="res://Player/arrow.png" type="Texture" id=1]
-[ext_resource path="res://Player/Arrow.gd" type="Script" id=2]
-[ext_resource path="res://Player/stuck_arrow.png" type="Texture" id=3]
+[ext_resource path="res://Player/stuck_arrow.png" type="Texture" id=1]
+[ext_resource path="res://Player/arrow.png" type="Texture" id=2]
+[ext_resource path="res://Enemies/Shot.gd" type="Script" id=3]
 
 [sub_resource type="AtlasTexture" id=1]
-atlas = ExtResource( 1 )
+atlas = ExtResource( 2 )
 region = Rect2( 0, 0, 39, 39 )
 
 [sub_resource type="AtlasTexture" id=2]
-atlas = ExtResource( 1 )
+atlas = ExtResource( 2 )
 region = Rect2( 0, 39, 39, 39 )
 
 [sub_resource type="AtlasTexture" id=3]
-atlas = ExtResource( 1 )
+atlas = ExtResource( 2 )
 region = Rect2( 39, 0, 39, 39 )
 
 [sub_resource type="AtlasTexture" id=4]
-atlas = ExtResource( 3 )
+atlas = ExtResource( 1 )
 region = Rect2( 0, 39, 39, 39 )
 
 [sub_resource type="AtlasTexture" id=5]
-atlas = ExtResource( 3 )
-region = Rect2( 39, 39, 39, 39 )
-
-[sub_resource type="AtlasTexture" id=6]
-atlas = ExtResource( 3 )
-region = Rect2( 39, 0, 39, 39 )
-
-[sub_resource type="AtlasTexture" id=7]
 atlas = ExtResource( 1 )
 region = Rect2( 39, 39, 39, 39 )
 
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 1 )
+region = Rect2( 39, 0, 39, 39 )
+
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 2 )
+region = Rect2( 39, 39, 39, 39 )
+
 [sub_resource type="AtlasTexture" id=8]
-atlas = ExtResource( 3 )
+atlas = ExtResource( 1 )
 region = Rect2( 0, 0, 39, 39 )
 
 [sub_resource type="SpriteFrames" id=9]
@@ -82,8 +82,8 @@ animations = [ {
 [sub_resource type="RectangleShape2D" id=10]
 extents = Vector2( 5.63551, 5.36951 )
 
-[node name="Arrow" type="Area2D"]
-script = ExtResource( 2 )
+[node name="Shot" type="Area2D"]
+script = ExtResource( 3 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 9 )
@@ -92,5 +92,4 @@ animation = "left"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 10 )
 
-[connection signal="area_entered" from="." to="." method="_on_Arrow_area_entered"]
-[connection signal="body_entered" from="." to="." method="_on_Arrow_body_entered"]
+[connection signal="body_entered" from="." to="." method="_on_Shot_body_entered"]
