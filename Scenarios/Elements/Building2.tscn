@@ -1,0 +1,48 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scenarios/City/City.tres" type="TileSet" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 63.8966, 12.9238 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 8.13367, 10 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 8.13367, 10 )
+
+[node name="Predio1" type="StaticBody2D"]
+light_mask = 0
+
+[node name="Prédios" type="TileMap" parent="."]
+position = Vector2( -335.343, -484.172 )
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 16, 16 )
+cell_tile_origin = 1
+collision_use_kinematic = true
+occluder_light_mask = 0
+format = 1
+tile_data = PoolIntArray( 1769485, 91, 0, 1769486, 90, 0, 1769487, 90, 0, 1769488, 90, 0, 1769489, 90, 0, 1769490, 90, 0, 1769491, 90, 0, 1769492, 90, 0, 1769493, 90, 0, 1769494, 90, 0, 1769495, 90, 0, 1769496, 90, 0, 1769497, 90, 0, 1769498, 90, 0, 1769499, 90, 0, 1769500, 89, 0, 1835021, 92, 0, 1835022, 94, 0, 1835023, 94, 0, 1835024, 94, 0, 1835025, 94, 0, 1835026, 94, 0, 1835027, 94, 0, 1835028, 94, 0, 1835029, 94, 0, 1835030, 94, 0, 1835031, 94, 0, 1835032, 94, 0, 1835033, 94, 0, 1835034, 94, 0, 1835035, 94, 0, 1835036, 88, 0, 1900557, 93, 0, 1900558, 40, 0, 1900559, 40, 0, 1900560, 40, 0, 1900561, 40, 0, 1900562, 40, 0, 1900563, 40, 0, 1900564, 40, 0, 1900565, 40, 0, 1900566, 40, 0, 1900567, 40, 0, 1900568, 40, 0, 1900569, 40, 0, 1900570, 40, 0, 1900571, 40, 0, 1900572, 87, 0, 1966093, 78, 0, 1966094, 34, 0, 1966095, 34, 0, 1966096, 34, 0, 1966097, 34, 0, 1966098, 34, 0, 1966099, 34, 0, 1966100, 34, 0, 1966101, 34, 0, 1966102, 34, 0, 1966103, 34, 0, 1966104, 34, 0, 1966105, 34, 0, 1966106, 34, 0, 1966107, 34, 0, 1966108, 77, 0, 2031629, 78, 0, 2031630, 34, 0, 2031631, 34, 0, 2031632, 34, 0, 2031633, 34, 0, 2031634, 34, 0, 2031635, 34, 0, 2031636, 45, 0, 2031637, 46, 0, 2031638, 34, 0, 2031639, 34, 0, 2031640, 34, 0, 2031641, 34, 0, 2031642, 34, 0, 2031643, 34, 0, 2031644, 77, 0, 2097165, 78, 0, 2097166, 34, 0, 2097167, 34, 0, 2097168, 34, 0, 2097169, 34, 0, 2097170, 34, 0, 2097171, 34, 0, 2097174, 34, 0, 2097175, 34, 0, 2097176, 34, 0, 2097177, 34, 0, 2097178, 34, 0, 2097179, 34, 0, 2097180, 76, 0 )
+
+[node name="Prédios2" type="TileMap" parent="."]
+position = Vector2( -639.962, -861.867 )
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 16, 16 )
+cell_tile_origin = 1
+collision_use_kinematic = true
+occluder_light_mask = 0
+format = 1
+tile_data = PoolIntArray( 3538983, 136, 0, 3670054, 55, 0, 3670057, 55, 0 )
+
+[node name="predio_branco" type="CollisionShape2D" parent="."]
+position = Vector2( 0.702698, 17.8513 )
+scale = Vector2( 2, 2 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2( 24.3354, 40.1219 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -24.3048, 39.8787 )
+shape = SubResource( 3 )

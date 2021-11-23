@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=2]
+[gd_scene load_steps=39 format=2]
 
 [ext_resource path="res://Player/Player.gd" type="Script" id=1]
 [ext_resource path="res://Player/char_indian.png" type="Texture" id=2]
@@ -21,36 +21,36 @@ atlas = ExtResource( 2 )
 region = Rect2( 144, 216, 48, 72 )
 
 [sub_resource type="AtlasTexture" id=5]
-atlas = ExtResource( 2 )
-region = Rect2( 0, 72, 48, 72 )
+atlas = ExtResource( 3 )
+region = Rect2( 0, 0, 48, 72 )
 
 [sub_resource type="AtlasTexture" id=6]
-atlas = ExtResource( 2 )
-region = Rect2( 48, 72, 48, 72 )
+atlas = ExtResource( 3 )
+region = Rect2( 48, 0, 48, 72 )
 
 [sub_resource type="AtlasTexture" id=7]
-atlas = ExtResource( 2 )
-region = Rect2( 96, 72, 48, 72 )
+atlas = ExtResource( 3 )
+region = Rect2( 96, 0, 48, 72 )
 
 [sub_resource type="AtlasTexture" id=8]
-atlas = ExtResource( 2 )
-region = Rect2( 144, 72, 48, 72 )
+atlas = ExtResource( 3 )
+region = Rect2( 144, 0, 48, 72 )
 
 [sub_resource type="AtlasTexture" id=9]
-atlas = ExtResource( 3 )
-region = Rect2( 0, 216, 48, 72 )
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 48, 72 )
 
 [sub_resource type="AtlasTexture" id=10]
-atlas = ExtResource( 3 )
-region = Rect2( 48, 216, 48, 72 )
+atlas = ExtResource( 2 )
+region = Rect2( 48, 0, 48, 72 )
 
 [sub_resource type="AtlasTexture" id=11]
-atlas = ExtResource( 3 )
-region = Rect2( 96, 216, 48, 72 )
+atlas = ExtResource( 2 )
+region = Rect2( 96, 0, 48, 72 )
 
 [sub_resource type="AtlasTexture" id=12]
-atlas = ExtResource( 3 )
-region = Rect2( 144, 216, 48, 72 )
+atlas = ExtResource( 2 )
+region = Rect2( 144, 0, 48, 72 )
 
 [sub_resource type="AtlasTexture" id=13]
 atlas = ExtResource( 3 )
@@ -69,68 +69,68 @@ atlas = ExtResource( 3 )
 region = Rect2( 144, 72, 48, 72 )
 
 [sub_resource type="AtlasTexture" id=17]
-atlas = ExtResource( 3 )
+atlas = ExtResource( 2 )
 region = Rect2( 0, 144, 48, 72 )
 
 [sub_resource type="AtlasTexture" id=18]
-atlas = ExtResource( 3 )
+atlas = ExtResource( 2 )
 region = Rect2( 48, 144, 48, 72 )
 
 [sub_resource type="AtlasTexture" id=19]
-atlas = ExtResource( 3 )
+atlas = ExtResource( 2 )
 region = Rect2( 96, 144, 48, 72 )
 
 [sub_resource type="AtlasTexture" id=20]
-atlas = ExtResource( 3 )
+atlas = ExtResource( 2 )
 region = Rect2( 144, 144, 48, 72 )
 
 [sub_resource type="AtlasTexture" id=21]
 atlas = ExtResource( 3 )
-region = Rect2( 0, 0, 48, 72 )
+region = Rect2( 0, 216, 48, 72 )
 
 [sub_resource type="AtlasTexture" id=22]
 atlas = ExtResource( 3 )
-region = Rect2( 48, 0, 48, 72 )
+region = Rect2( 48, 216, 48, 72 )
 
 [sub_resource type="AtlasTexture" id=23]
 atlas = ExtResource( 3 )
-region = Rect2( 96, 0, 48, 72 )
+region = Rect2( 96, 216, 48, 72 )
 
 [sub_resource type="AtlasTexture" id=24]
 atlas = ExtResource( 3 )
-region = Rect2( 144, 0, 48, 72 )
+region = Rect2( 144, 216, 48, 72 )
 
 [sub_resource type="AtlasTexture" id=25]
 atlas = ExtResource( 2 )
-region = Rect2( 0, 144, 48, 72 )
+region = Rect2( 0, 72, 48, 72 )
 
 [sub_resource type="AtlasTexture" id=26]
 atlas = ExtResource( 2 )
-region = Rect2( 48, 144, 48, 72 )
+region = Rect2( 48, 72, 48, 72 )
 
 [sub_resource type="AtlasTexture" id=27]
 atlas = ExtResource( 2 )
-region = Rect2( 96, 144, 48, 72 )
+region = Rect2( 96, 72, 48, 72 )
 
 [sub_resource type="AtlasTexture" id=28]
 atlas = ExtResource( 2 )
-region = Rect2( 144, 144, 48, 72 )
+region = Rect2( 144, 72, 48, 72 )
 
 [sub_resource type="AtlasTexture" id=29]
-atlas = ExtResource( 2 )
-region = Rect2( 0, 0, 48, 72 )
+atlas = ExtResource( 3 )
+region = Rect2( 0, 144, 48, 72 )
 
 [sub_resource type="AtlasTexture" id=30]
-atlas = ExtResource( 2 )
-region = Rect2( 48, 0, 48, 72 )
+atlas = ExtResource( 3 )
+region = Rect2( 48, 144, 48, 72 )
 
 [sub_resource type="AtlasTexture" id=31]
-atlas = ExtResource( 2 )
-region = Rect2( 96, 0, 48, 72 )
+atlas = ExtResource( 3 )
+region = Rect2( 96, 144, 48, 72 )
 
 [sub_resource type="AtlasTexture" id=32]
-atlas = ExtResource( 2 )
-region = Rect2( 144, 0, 48, 72 )
+atlas = ExtResource( 3 )
+region = Rect2( 144, 144, 48, 72 )
 
 [sub_resource type="SpriteFrames" id=33]
 animations = [ {
@@ -141,12 +141,12 @@ animations = [ {
 }, {
 "frames": [ SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ) ],
 "loop": true,
-"name": "yes_left",
+"name": "no_down",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ) ],
 "loop": true,
-"name": "no_up",
+"name": "yes_down",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ) ],
@@ -156,36 +156,49 @@ animations = [ {
 }, {
 "frames": [ SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ) ],
 "loop": true,
-"name": "no_right",
+"name": "yes_right",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ) ],
 "loop": true,
-"name": "no_down",
+"name": "no_up",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 25 ), SubResource( 26 ), SubResource( 27 ), SubResource( 28 ) ],
 "loop": true,
-"name": "yes_right",
+"name": "yes_left",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 29 ), SubResource( 30 ), SubResource( 31 ), SubResource( 32 ) ],
 "loop": true,
-"name": "yes_down",
+"name": "no_right",
 "speed": 5.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=34]
 extents = Vector2( 14.7501, 9.92834 )
 
+[sub_resource type="RectangleShape2D" id=35]
+extents = Vector2( 8.38968, 14.4437 )
+
 [node name="Player" type="KinematicBody2D"]
 collision_mask = 2
 script = ExtResource( 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 0.0704803, -2.30998 )
 frames = SubResource( 33 )
 animation = "no_up"
+offset = Vector2( -3.22028, -4.09652 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 1.8805, 25.7167 )
+position = Vector2( -1.48689, 19.5451 )
 shape = SubResource( 34 )
+
+[node name="Hurtbox" type="Area2D" parent="."]
+position = Vector2( 0, -1.68179 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
+position = Vector2( -1.69165, 1.11757 )
+scale = Vector2( 1.46002, 2.16496 )
+shape = SubResource( 35 )

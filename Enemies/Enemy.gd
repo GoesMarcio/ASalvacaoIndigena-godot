@@ -37,6 +37,9 @@ func _ready():
 		levelNavigation = tree.get_nodes_in_group("LevelNavigation")[0]
 	if tree.has_group("Player"):
 		player = tree.get_nodes_in_group("Player")[0]
+		
+	print(levelNavigation)
+	print(player)
 
 func on_time_out_complete():
 	print("atirei")
