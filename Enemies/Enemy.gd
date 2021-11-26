@@ -18,12 +18,15 @@ var levelNavigation: Navigation2D = null
 var player = null
 var player_spotted: bool = false
 
+
 onready var line2d = $Line2D
 onready var rc = $RayCast2D
+onready var progressLife = $ProgressBar
 
 onready var bullet := preload("res://Enemies/Shot.tscn")
 var timer = null
 var can_shot = false
+var can_walk = true
 
 func _ready():
 	timer = get_node("Timer")
@@ -42,8 +45,8 @@ func _ready():
 	print(player)
 
 func on_time_out_complete():
-	print("atirei")
 	can_shot = true
+	can_walk = true
 
 func _physics_process(delta):
 	line2d.global_position = Vector2.ZERO
@@ -80,24 +83,63 @@ func navigate():
 
 func generate_path():
 	if levelNavigation != null and player != null:
-		if euclidean_distance(position, player.position) < 250:
-			state = ATTACK
-			path = [re_distance(position, player.position)]
-			line2d.points = []
+		var side = get_closer_side()
+		if euclidean_distance(position, side[1]) < 5 || euclidean_distance(position, player.position) < 200:
+			var d = check_axis(side[0])
+			if !d[0]:
+				state = ATTACK
+				path = [re_distance(position, player.position)]
+				line2d.points = []
+			else:
+				state = MOVE
+				path = levelNavigation.get_simple_path(position, position + d[1], true)
+				line2d.points = path
 		else:
 			state = MOVE
-			path = levelNavigation.get_simple_path(position, player.position, true)
+			path = levelNavigation.get_simple_path(position, side[1], true)
 			line2d.points = path
+
+func check_axis(side):
+	match side:
+		0:
+			var aux = position - player.position
+			return [abs(aux.y) < 50, aux]
+		1:
+			var aux = position - player.position
+			return [abs(aux.y) < 50, aux]
+		2:
+			var aux = position - player.position
+			return [abs(aux.x) < 50, aux]
+		3:
+			var aux = position - player.position
+			return [abs(aux.x) < 50, aux]
+
+func get_closer_side():
+	var distance = 200
+	var sides = [player.position + Vector2(0, distance), player.position + Vector2(0, -distance), player.position + Vector2(distance, 0), player.position + Vector2(-distance, 0)]
+	var result = -1
+	var aux = [-1, Vector2.ZERO]
+	
+	for i in range(sides.size()):
+		var d = euclidean_distance(position, sides[i])
+		if result == -1 || d < result:
+			result = d
+			aux[0] = i
+			aux[1] = sides[i]
+	
+	return aux
 
 func move():
 	match state:
 		MOVE:
-			move_and_slide(velocity * run_speed, Vector2.UP)
+			if can_walk:
+				move_and_slide(velocity * run_speed, Vector2.UP)
 		ATTACK:
 			shot()
 
 func shot():
 	if can_shot:
+		can_walk = false
 		var b := bullet.instance()
 		b.position = position
 		get_parent().add_child(b)
@@ -133,6 +175,7 @@ func _on_Area2D_body_exited(body):
 
 func receive_shot():
 	life -= 50
+	progressLife.value = (life * 100 / max_life)
 	if(life <= 0):
 		queue_free()
 

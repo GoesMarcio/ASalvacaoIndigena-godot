@@ -6,11 +6,11 @@
 
 [sub_resource type="AtlasTexture" id=1]
 atlas = ExtResource( 2 )
-region = Rect2( 0, 0, 39, 39 )
+region = Rect2( 0, 39, 39, 39 )
 
 [sub_resource type="AtlasTexture" id=2]
 atlas = ExtResource( 2 )
-region = Rect2( 0, 39, 39, 39 )
+region = Rect2( 0, 0, 39, 39 )
 
 [sub_resource type="AtlasTexture" id=3]
 atlas = ExtResource( 2 )
@@ -40,12 +40,12 @@ region = Rect2( 0, 0, 39, 39 )
 animations = [ {
 "frames": [ SubResource( 1 ) ],
 "loop": true,
-"name": "left",
+"name": "right",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 2 ) ],
 "loop": true,
-"name": "right",
+"name": "left",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 3 ) ],
@@ -92,4 +92,5 @@ animation = "left"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 10 )
 
+[connection signal="area_entered" from="." to="." method="_on_Shot_area_entered"]
 [connection signal="body_entered" from="." to="." method="_on_Shot_body_entered"]

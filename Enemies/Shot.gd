@@ -28,8 +28,8 @@ func change_side(side):
 		sprite.play("up")
 
 
-func _on_Shot_body_entered(body):
-	if body.is_in_group("Player"):
+func _on_Shot_area_entered(area):
+	if area.is_in_group("Hitbox_player"):
 		get_tree().call_group('Player', 'receive_shot')
 		#body.queue_free()
 		queue_free()

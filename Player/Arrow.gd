@@ -35,12 +35,6 @@ func _physics_process(delta):
 	position += side_position * speed * delta
 
 func _on_Arrow_body_entered(body):
-	print(body.name)
-	if body.is_in_group("enemy"):
-		body.receive_shot()
-		#body.queue_free()
-		queue_free()
-		
 	if body.is_in_group("struct"):
 		stuck(side_position)
 		side_position = Vector2(0,0)
@@ -63,3 +57,8 @@ func _on_Arrow_area_entered(area):
 		var city = get_node("/root/Game/City")
 		city.queue_free()
 		get_tree().call_group('hud', 'stopTimer')
+
+	if area.is_in_group("Hitbox_enemy"):
+		area.get_parent().receive_shot()
+		#body.queue_free()
+		queue_free()
