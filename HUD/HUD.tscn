@@ -4,109 +4,109 @@
 [ext_resource path="res://assets/Images/HUD/bg_life.png" type="Texture" id=2]
 [ext_resource path="res://HUD/LifeSprite.gd" type="Script" id=4]
 
-[sub_resource type="AtlasTexture" id=2]
+[sub_resource type="AtlasTexture" id=1]
 atlas = ExtResource( 2 )
 region = Rect2( 0, 64, 236, 32 )
 
-[sub_resource type="AtlasTexture" id=3]
+[sub_resource type="AtlasTexture" id=2]
 atlas = ExtResource( 2 )
 region = Rect2( 0, 256, 236, 32 )
 
-[sub_resource type="AtlasTexture" id=4]
-atlas = ExtResource( 2 )
-region = Rect2( 0, 288, 236, 32 )
-
-[sub_resource type="AtlasTexture" id=5]
-atlas = ExtResource( 2 )
-region = Rect2( 0, 32, 236, 32 )
-
-[sub_resource type="AtlasTexture" id=6]
-atlas = ExtResource( 2 )
-region = Rect2( 0, 128, 236, 32 )
-
-[sub_resource type="AtlasTexture" id=7]
-atlas = ExtResource( 2 )
-region = Rect2( 0, 224, 236, 32 )
-
-[sub_resource type="AtlasTexture" id=8]
+[sub_resource type="AtlasTexture" id=3]
 atlas = ExtResource( 2 )
 region = Rect2( 0, 320, 236, 32 )
 
-[sub_resource type="AtlasTexture" id=9]
+[sub_resource type="AtlasTexture" id=4]
 atlas = ExtResource( 2 )
 region = Rect2( 0, 192, 236, 32 )
 
-[sub_resource type="AtlasTexture" id=10]
+[sub_resource type="AtlasTexture" id=5]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 288, 236, 32 )
+
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 32, 236, 32 )
+
+[sub_resource type="AtlasTexture" id=7]
 atlas = ExtResource( 2 )
 region = Rect2( 0, 96, 236, 32 )
 
-[sub_resource type="AtlasTexture" id=11]
+[sub_resource type="AtlasTexture" id=8]
 atlas = ExtResource( 2 )
 region = Rect2( 0, 0, 236, 32 )
 
-[sub_resource type="AtlasTexture" id=12]
+[sub_resource type="AtlasTexture" id=9]
 atlas = ExtResource( 2 )
 region = Rect2( 0, 160, 236, 32 )
 
-[sub_resource type="SpriteFrames" id=13]
+[sub_resource type="AtlasTexture" id=10]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 224, 236, 32 )
+
+[sub_resource type="AtlasTexture" id=11]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 128, 236, 32 )
+
+[sub_resource type="SpriteFrames" id=12]
 animations = [ {
-"frames": [ SubResource( 2 ) ],
+"frames": [ SubResource( 1 ) ],
 "loop": true,
 "name": "2",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 3 ) ],
+"frames": [ SubResource( 2 ) ],
 "loop": true,
 "name": "8",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 4 ) ],
-"loop": true,
-"name": "9",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 5 ) ],
-"loop": true,
-"name": "1",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 6 ) ],
-"loop": true,
-"name": "4",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 7 ) ],
-"loop": true,
-"name": "7",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 8 ) ],
+"frames": [ SubResource( 3 ) ],
 "loop": true,
 "name": "10",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 9 ) ],
+"frames": [ SubResource( 4 ) ],
 "loop": true,
 "name": "6",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 10 ) ],
+"frames": [ SubResource( 5 ) ],
+"loop": true,
+"name": "9",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 6 ) ],
+"loop": true,
+"name": "1",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 7 ) ],
 "loop": true,
 "name": "3",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 11 ) ],
+"frames": [ SubResource( 8 ) ],
 "loop": true,
 "name": "0",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 12 ) ],
+"frames": [ SubResource( 9 ) ],
 "loop": true,
 "name": "5",
 "speed": 5.0
+}, {
+"frames": [ SubResource( 10 ) ],
+"loop": true,
+"name": "7",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 11 ) ],
+"loop": true,
+"name": "4",
+"speed": 5.0
 } ]
 
-[sub_resource type="DynamicFont" id=14]
+[sub_resource type="DynamicFont" id=13]
 size = 25
 extra_spacing_top = -3
 font_data = ExtResource( 1 )
@@ -115,7 +115,7 @@ font_data = ExtResource( 1 )
 "Life",
 ]]
 position = Vector2( 144.38, 38.5683 )
-frames = SubResource( 13 )
+frames = SubResource( 12 )
 animation = "10"
 script = ExtResource( 4 )
 
@@ -124,7 +124,7 @@ margin_left = 64.0
 margin_top = -12.0
 margin_right = 113.0
 margin_bottom = 14.0
-custom_fonts/font = SubResource( 14 )
+custom_fonts/font = SubResource( 13 )
 text = "100"
 align = 1
 valign = 1

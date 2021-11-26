@@ -82,4 +82,5 @@ func receive_shot():
 	life -= 20
 	get_tree().call_group("Life", "update_life", life)
 	if life <= 0:
-		print("morri")
+		get_tree().call_group("Game", "game_over")
+		queue_free()

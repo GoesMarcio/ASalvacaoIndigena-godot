@@ -20,3 +20,7 @@ func updateTime(delta):
 			time_sec = "0"+time_sec
 			
 		text = "Tempo restante: " + str(time_min) +":"+str(time_sec)
+		
+		if time < 0:
+			get_tree().call_group("Game", "game_over")
+			queue_free()

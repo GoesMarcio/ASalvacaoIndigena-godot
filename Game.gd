@@ -6,6 +6,7 @@ var tribe = preload("res://Scenarios/Tribe/Tribe2.tscn")
 var beach = preload("res://Scenarios/Beach/Beach.tscn")
 var city = preload("res://Scenarios/City/City_collision.tscn")
 var dialog = preload("res://assets/Dialog/Dialog.tscn")
+var game_over = preload("res://GameOver/GameOver.tscn")
 
 onready var story := []
 
@@ -20,3 +21,6 @@ func return_player_position(scene, dis, look):
 	scene.player.position = position_player - dis
 	scene.player.sprite.play(look)
 	scene.player.sprite.stop()
+
+func game_over():
+	add_child(game_over.instance())

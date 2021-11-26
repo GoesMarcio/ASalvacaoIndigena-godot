@@ -49,6 +49,9 @@ func on_time_out_complete():
 	can_walk = true
 
 func _physics_process(delta):
+	if !get_tree().has_group("Player"):
+		player == null
+		
 	line2d.global_position = Vector2.ZERO
 	if player and player_spotted:
 		generate_path()
@@ -138,6 +141,10 @@ func move():
 			shot()
 
 func shot():
+	if !get_tree().has_group("Player"):
+		player == null
+		return
+
 	if can_shot:
 		can_walk = false
 		var b := bullet.instance()
@@ -180,7 +187,7 @@ func receive_shot():
 		queue_free()
 
 
-func direction_shot():
+func direction_shot():		
 	var d = (position - player.position)
 	var a = d.abs()
 	
