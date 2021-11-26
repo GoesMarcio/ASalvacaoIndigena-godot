@@ -22,6 +22,7 @@ var player_spotted: bool = false
 onready var line2d = $Line2D
 onready var rc = $RayCast2D
 onready var progressLife = $ProgressBar
+onready var sprite := $AnimatedSprite
 
 onready var bullet := preload("res://Enemies/Shot.tscn")
 var timer = null
@@ -79,6 +80,7 @@ func navigate():
 	elif path.size() == 1:
 		velocity = (path[0] - position).normalized()
 		if euclidean_distance(position, path[0]) < 50:
+			sprite.stop()
 			state = WAIT
 			path.pop_front()
 	else:
@@ -90,6 +92,7 @@ func generate_path():
 		if euclidean_distance(position, side[1]) < 5 || euclidean_distance(position, player.position) < 200:
 			var d = check_axis(side[0])
 			if !d[0]:
+				sprite.stop()
 				state = ATTACK
 				path = [re_distance(position, player.position)]
 				line2d.points = []
@@ -136,6 +139,18 @@ func move():
 	match state:
 		MOVE:
 			if can_walk:
+				if abs(velocity.x) > abs(velocity.y):
+					if velocity.x > 0:
+						sprite.play("right")
+					elif velocity.x < 0:
+						sprite.play("left")
+				else:
+					if velocity.y > 0:
+						sprite.play("down")
+					elif velocity.y < 0:
+						sprite.play("up")
+				if velocity == Vector2.ZERO:
+					sprite.stop()
 				move_and_slide(velocity * run_speed, Vector2.UP)
 		ATTACK:
 			shot()
