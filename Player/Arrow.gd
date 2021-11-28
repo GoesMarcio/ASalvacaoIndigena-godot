@@ -1,20 +1,17 @@
 extends Area2D
 
-
 onready var sprite := $AnimatedSprite
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+onready var shotSound := $Shot
+onready var stuckEnemySound := $StuckEnemy
+onready var stuckStructSound := $StuckStruct
+onready var timer = $Timer
 
 var speed = 500
-
 var side_position = Vector2(1, 0)
+var can_move = true
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	print(get_parent())
-	print(get_parent().name)
-	pass # Replace with function body.
+	shotSound.play()
 
 func change_side(side):
 	side_position = side
@@ -27,15 +24,13 @@ func change_side(side):
 	if(side == Vector2(0,-1)):
 		sprite.play("up")
 
-#func _physics_process(delta):
-#	position = position + (side_position * 5)
-
-
 func _physics_process(delta):
-	position += side_position * speed * delta
+	if can_move:
+		position += side_position * speed * delta
 
 func _on_Arrow_body_entered(body):
 	if body.is_in_group("struct"):
+		stuckStructSound.play()
 		stuck(side_position)
 		side_position = Vector2(0,0)
 
@@ -52,6 +47,7 @@ func stuck(side):
 
 func _on_Arrow_area_entered(area):
 	if area.is_in_group("Statue"):
+		stuckStructSound.play()
 		var root = get_node("/root/Game")	
 		root.add_child(root.beach.instance())
 		var city = get_node("/root/Game/City")
@@ -59,6 +55,14 @@ func _on_Arrow_area_entered(area):
 		get_tree().call_group('hud', 'stopTimer')
 
 	if area.is_in_group("Hitbox_enemy"):
+		visible = false
+		can_move = false
+		stuckEnemySound.play()
 		area.get_parent().receive_shot()
-		#body.queue_free()
-		queue_free()
+		
+		timer.set_wait_time(0.5)
+		timer.connect("timeout", self, "on_time_out_complete")
+		timer.start()
+
+func on_time_out_complete():
+	queue_free()

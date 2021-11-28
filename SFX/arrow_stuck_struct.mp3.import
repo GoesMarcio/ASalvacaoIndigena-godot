@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/arrow_stuck_struct.mp3-35f19d58184802d1363756a425e5b5f8.mp3str"
+
+[deps]
+
+source_file="res://SFX/arrow_stuck_struct.mp3"
+dest_files=[ "res://.import/arrow_stuck_struct.mp3-35f19d58184802d1363756a425e5b5f8.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

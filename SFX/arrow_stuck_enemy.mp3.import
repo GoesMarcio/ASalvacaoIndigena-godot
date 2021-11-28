@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/arrow_stuck_enemy.mp3-378d7b6087da55a1f0e4c04bd15d193c.mp3str"
+
+[deps]
+
+source_file="res://SFX/arrow_stuck_enemy.mp3"
+dest_files=[ "res://.import/arrow_stuck_enemy.mp3-378d7b6087da55a1f0e4c04bd15d193c.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

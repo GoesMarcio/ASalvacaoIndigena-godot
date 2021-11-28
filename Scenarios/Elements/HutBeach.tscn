@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scenarios/Elements/Barraca.png" type="Texture" id=1]
+
+[node name="Barraca" type="StaticBody2D"]
+scale = Vector2( 1.69888, 1.69738 )
+collision_layer = 2
+
+[node name="Barraca" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+
+[node name="CollisionShape2D2" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( 46.5701, 40.3067, 47.6854, 20.3675, 29.8463, -5.42285, -0.215866, -6.41479, -30.278, -6.08414, -47.1631, 20.7282, -47.1631, 38.2634, -33.7121, 53.6526, -0.030412, 61.1692, 33.0917, 53.5459 )

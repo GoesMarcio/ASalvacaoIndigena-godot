@@ -2,6 +2,8 @@ extends Area2D
 
 export(PackedScene) var target_scene
 
+export var can_enter := true
+
 #var hut = preload("res://Scenarios/Tribe/Indoors/Indoors.tscn").instance()
 
 func _physics_process(delta: float) -> void:
@@ -9,7 +11,6 @@ func _physics_process(delta: float) -> void:
 		next_level()
 			
 func next_level():
-
 	var root = get_node("/root/Game")
 	var tribe = get_node("/root/Game/Tribe")
 	

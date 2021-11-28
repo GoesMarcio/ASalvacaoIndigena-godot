@@ -5,7 +5,9 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 27.2604, 26.5486 )
 
-[node name="Tree" type="StaticBody2D"]
+[node name="Tree" type="StaticBody2D" groups=[
+"struct",
+]]
 position = Vector2( 0.370041, 7.92957 )
 
 [node name="TileMap" type="TileMap" parent="."]

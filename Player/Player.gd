@@ -10,9 +10,9 @@ export var sprite_arrow := 'no'
 onready var sprite := $AnimatedSprite
 onready var life := 100
 onready var can_move := true
+onready var moving := false
 
 onready var bullet := preload("res://Player/Arrow.tscn")
-#export (PackedScene) var bullet : PackedScene
 
 var side_position := Vector2(0,1)
 var velocity := Vector2()
@@ -42,7 +42,7 @@ func get_input_side():
 	velocity.y = Input.get_action_strength("ui_down")-Input.get_action_strength("ui_up")
 	velocity = velocity.normalized() * run_speed
 	
-	if velocity.x > 0:
+	if velocity.x > 0:		
 		sprite.play(sprite_arrow + "_right")
 		side_position = Vector2(1,0)
 	elif velocity.x < 0:
