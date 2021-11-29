@@ -1,12 +1,20 @@
 extends Area2D
 
 onready var sprite := $AnimatedSprite
+onready var shotSound := $Shot
+onready var painSound := $PainSound
+onready var timer = $Timer
 var speed = 500
 var side_position = Vector2(1, 0)
 
+var can_move = true
+
+func _ready():
+	shotSound.play()
 
 func _physics_process(delta):
-	position += side_position * speed * delta
+	if can_move:
+		position += side_position * speed * delta
 
 func _on_Arrow_body_entered(body):
 	print(body.name)
@@ -30,6 +38,13 @@ func change_side(side):
 
 func _on_Shot_area_entered(area):
 	if area.is_in_group("Hitbox_player"):
+		visible = false
+		can_move = false
 		get_tree().call_group('Player', 'receive_shot')
-		#body.queue_free()
-		queue_free()
+		painSound.play()
+		timer.set_wait_time(0.8)
+		timer.connect("timeout", self, "on_time_out_complete")
+		timer.start()
+
+func on_time_out_complete():
+	queue_free()

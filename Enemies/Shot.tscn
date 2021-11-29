@@ -1,42 +1,27 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=11 format=2]
 
-[ext_resource path="res://Player/stuck_arrow.png" type="Texture" id=1]
-[ext_resource path="res://Player/arrow.png" type="Texture" id=2]
+[ext_resource path="res://Enemies/shot.png" type="Texture" id=1]
+[ext_resource path="res://SFX/gun_shot.mp3" type="AudioStream" id=2]
 [ext_resource path="res://Enemies/Shot.gd" type="Script" id=3]
+[ext_resource path="res://SFX/pain_sound.mp3" type="AudioStream" id=4]
 
 [sub_resource type="AtlasTexture" id=1]
-atlas = ExtResource( 2 )
-region = Rect2( 0, 39, 39, 39 )
+atlas = ExtResource( 1 )
+region = Rect2( 0, 23, 23, 23 )
 
 [sub_resource type="AtlasTexture" id=2]
-atlas = ExtResource( 2 )
-region = Rect2( 0, 0, 39, 39 )
+atlas = ExtResource( 1 )
+region = Rect2( 0, 0, 23, 23 )
 
 [sub_resource type="AtlasTexture" id=3]
-atlas = ExtResource( 2 )
-region = Rect2( 39, 0, 39, 39 )
+atlas = ExtResource( 1 )
+region = Rect2( 23, 23, 23, 23 )
 
 [sub_resource type="AtlasTexture" id=4]
 atlas = ExtResource( 1 )
-region = Rect2( 0, 39, 39, 39 )
+region = Rect2( 23, 0, 23, 23 )
 
-[sub_resource type="AtlasTexture" id=5]
-atlas = ExtResource( 1 )
-region = Rect2( 39, 39, 39, 39 )
-
-[sub_resource type="AtlasTexture" id=6]
-atlas = ExtResource( 1 )
-region = Rect2( 39, 0, 39, 39 )
-
-[sub_resource type="AtlasTexture" id=7]
-atlas = ExtResource( 2 )
-region = Rect2( 39, 39, 39, 39 )
-
-[sub_resource type="AtlasTexture" id=8]
-atlas = ExtResource( 1 )
-region = Rect2( 0, 0, 39, 39 )
-
-[sub_resource type="SpriteFrames" id=9]
+[sub_resource type="SpriteFrames" id=5]
 animations = [ {
 "frames": [ SubResource( 1 ) ],
 "loop": true,
@@ -55,42 +40,32 @@ animations = [ {
 }, {
 "frames": [ SubResource( 4 ) ],
 "loop": true,
-"name": "stuck_right",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 5 ) ],
-"loop": true,
-"name": "stuck_down",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 6 ) ],
-"loop": true,
-"name": "stuck_up",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 7 ) ],
-"loop": true,
 "name": "down",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 8 ) ],
-"loop": true,
-"name": "stuck_left",
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=10]
+[sub_resource type="RectangleShape2D" id=6]
 extents = Vector2( 5.63551, 5.36951 )
 
 [node name="Shot" type="Area2D"]
 script = ExtResource( 3 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-frames = SubResource( 9 )
+frames = SubResource( 5 )
 animation = "left"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource( 10 )
+shape = SubResource( 6 )
+
+[node name="Shot" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 2 )
+volume_db = -4.0
+
+[node name="PainSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 4 )
+volume_db = 1.0
+
+[node name="Timer" type="Timer" parent="."]
 
 [connection signal="area_entered" from="." to="." method="_on_Shot_area_entered"]
 [connection signal="body_entered" from="." to="." method="_on_Shot_body_entered"]
