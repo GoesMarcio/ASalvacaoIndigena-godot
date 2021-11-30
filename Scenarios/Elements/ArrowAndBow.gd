@@ -18,5 +18,6 @@ func _ready():
 
 func _on_bow_body_entered(body):
 	if body.name == "Player":
-		body.sprite_arrow = "yes";
+		body.sprite_arrow = "yes"
+		get_tree().call_group('Arrows_HUD', 'change_arrows', '10')
 		queue_free()
