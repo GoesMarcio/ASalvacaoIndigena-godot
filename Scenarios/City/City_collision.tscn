@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenarios/City/City.tres" type="TileSet" id=2]
@@ -9,6 +9,9 @@
 [ext_resource path="res://Scenarios/Elements/Building.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scenarios/Elements/Building2.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scenarios/Elements/Tree.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scenarios/Elements/Building3.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scenarios/Elements/Building4.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Scenarios/Elements/Building5.tscn" type="PackedScene" id=12]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 16.0991, 7.02048 )
@@ -47,6 +50,7 @@ tile_data = PoolIntArray( 0, 23, 0, 1, 38, 0, 5, 38, 0, 65536, 24, 0, 131072, 23
 [node name="StaticBody2D" type="StaticBody2D" parent="Node2D/praia"]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Node2D/praia/StaticBody2D"]
+position = Vector2( 0, 1 )
 build_mode = 1
 polygon = PoolVector2Array( 10.993, 0.0841889, 126.724, 0.174877, 127.765, 122.914, 71.4453, 151.055, 127.616, 123.063, 127.984, 0.80484, 2047.52, 0.328064, 2048.58, 1215.09, 126.248, 1209.09, 126.248, 191.743, 127.666, 161.378, 71.8907, 191.145, 126.25, 192, 128.488, 1248.61, 8.6396, 1248.61, 10.993, 0.025197 )
 
@@ -78,6 +82,18 @@ scale = Vector2( 2, 2 )
 
 [node name="Predio2" parent="Node2D/YSort" instance=ExtResource( 8 )]
 position = Vector2( 1277.72, 871.434 )
+scale = Vector2( 2, 2 )
+
+[node name="Predio3" parent="Node2D/YSort" instance=ExtResource( 10 )]
+position = Vector2( 603, 253.226 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Predio4" parent="Node2D/YSort" instance=ExtResource( 11 )]
+position = Vector2( 1924.45, 873.531 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Predio5" parent="Node2D/YSort" instance=ExtResource( 12 )]
+position = Vector2( 1970.09, 240.718 )
 scale = Vector2( 2, 2 )
 
 [node name="down" type="StaticBody2D" parent="Node2D/YSort"]
@@ -143,4 +159,10 @@ editor_draw_drag_margin = true
 position = Vector2( 1265.47, 382.019 )
 
 [node name="Enemy" parent="Node2D/YSort" instance=ExtResource( 6 )]
-position = Vector2( 596.182, 334.272 )
+position = Vector2( 749.417, 507.106 )
+
+[node name="Enemy2" parent="Node2D/YSort" instance=ExtResource( 6 )]
+position = Vector2( 1118, 980.571 )
+
+[node name="Enemy3" parent="Node2D/YSort" instance=ExtResource( 6 )]
+position = Vector2( 716.159, 1074.86 )
