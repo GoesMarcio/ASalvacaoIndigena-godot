@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/char_indian_without_bow(old).png-a74ac421d599c21544660680596e2090.stex"
+path="res://.import/Room_Builder_free_32x32.png-875ad18b3aba4a2b0b03e8197a951c42.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Player/char_indian_without_bow(old).png"
-dest_files=[ "res://.import/char_indian_without_bow(old).png-a74ac421d599c21544660680596e2090.stex" ]
+source_file="res://assets/Tilesets/Room_Builder_free_32x32.png"
+dest_files=[ "res://.import/Room_Builder_free_32x32.png-875ad18b3aba4a2b0b03e8197a951c42.stex" ]
 
 [params]
 
