@@ -6,10 +6,10 @@ export var run_speed := 150
 export var gravity := 35
 export var turn := 'down'
 export var sprite_arrow := 'no'
+export var can_move := true
 
 onready var sprite := $AnimatedSprite
 onready var life := 100
-onready var can_move := true
 onready var moving := false
 
 onready var bullet := preload("res://Player/Arrow.tscn")

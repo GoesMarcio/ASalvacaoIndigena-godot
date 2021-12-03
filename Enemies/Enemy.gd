@@ -3,6 +3,7 @@ extends KinematicBody2D
 export var max_life := 100
 var life = max_life
 
+export var can_move := true
 export var run_speed := 80
 var velocity: Vector2 = Vector2.ZERO
 
@@ -50,6 +51,9 @@ func on_time_out_complete():
 	can_walk = true
 
 func _physics_process(delta):
+	if !can_move:
+		return
+
 	if !get_tree().has_group("Player"):
 		player == null
 		
@@ -216,3 +220,8 @@ func direction_shot():
 			return Vector2.UP
 		else:
 			return Vector2.DOWN
+
+
+
+func change_can_move(can):
+	can_move = can

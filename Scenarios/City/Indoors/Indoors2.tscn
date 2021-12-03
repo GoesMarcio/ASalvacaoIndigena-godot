@@ -1,7 +1,8 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Scenarios/City/Indoors/Indoors1.tres" type="TileSet" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenarios/City/Indoors/Indoors2.gd" type="Script" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 4.16223, 280.461 )
@@ -12,22 +13,26 @@ extents = Vector2( 363.693, 4.44649 )
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 18.3709, 28.5074 )
 
-[sub_resource type="RectangleShape2D" id=7]
-extents = Vector2( 15.6731, 31.302 )
-
 [sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 15.6731, 31.302 )
 
-[sub_resource type="RectangleShape2D" id=8]
-extents = Vector2( 77.0496, 140.884 )
-
 [sub_resource type="RectangleShape2D" id=5]
-extents = Vector2( 98.172, 40.9568 )
+extents = Vector2( 15.6731, 31.302 )
 
 [sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 77.0496, 140.884 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 98.172, 40.9568 )
+
+[sub_resource type="RectangleShape2D" id=8]
 extents = Vector2( 93.8331, 36.4832 )
 
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 34.084, 10 )
+
 [node name="Indors1" type="Node2D"]
+script = ExtResource( 3 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
 margin_left = -42.9858
@@ -87,35 +92,35 @@ shape = SubResource( 3 )
 
 [node name="CollisionShape2D18" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 175.568, 340.446 )
-shape = SubResource( 7 )
+shape = SubResource( 4 )
 
 [node name="CollisionShape2D17" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 176.284, 211.223 )
-shape = SubResource( 7 )
+shape = SubResource( 4 )
 
 [node name="CollisionShape2D8" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 385.142, 128.111 )
-shape = SubResource( 7 )
+shape = SubResource( 4 )
 
 [node name="CollisionShape2D7" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 831.564, 113.292 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 818.353, 321.391 )
-shape = SubResource( 8 )
+shape = SubResource( 6 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 250.67, 450.957 )
-shape = SubResource( 5 )
+shape = SubResource( 7 )
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 254.806, 192.474 )
-shape = SubResource( 6 )
+shape = SubResource( 8 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 252.949, 318.813 )
-shape = SubResource( 6 )
+shape = SubResource( 8 )
 
 [node name="YSort" type="YSort" parent="."]
 
@@ -127,13 +132,13 @@ format = 1
 tile_data = PoolIntArray( 131079, 107, 0, 131097, 35, 0, 196619, 33, 0, 196627, 33, 0, 262149, 103, 0, 262153, 102, 0, 327685, 109, 0, 327686, 105, 0, 327703, 49, 0, 327704, 50, 0, 327705, 50, 0, 327706, 50, 0, 458757, 110, 0, 458775, 106, 0, 524293, 103, 0, 524297, 102, 0, 524311, 53, 0, 589829, 109, 0, 589830, 105, 0, 589847, 106, 0, 655383, 53, 0, 720901, 110, 0, 720919, 106, 0, 786437, 103, 0, 786441, 102, 0, 786455, 53, 0, 786456, 57, 0, 851973, 109, 0, 851974, 105, 0, 851991, 54, 0, 851993, 55, 0, 851994, 59, 0, 917514, 34, 0, 917528, 58, 0, 917529, 58, 0, 983045, 110, 0 )
 
 [node name="Player" parent="YSort" groups=[
-"Player",
+"Player_indoor",
 ] instance=ExtResource( 2 )]
-position = Vector2( 536.187, 321.071 )
+position = Vector2( 515, 520 )
 run_speed = 200
+can_move = false
 
 [node name="Camera2D" type="Camera2D" parent="YSort/Player"]
-current = true
 process_mode = 0
 limit_left = 1
 limit_top = 1
@@ -148,3 +153,11 @@ drag_margin_right = 0.4
 drag_margin_bottom = 0.4
 editor_draw_limits = true
 editor_draw_drag_margin = true
+
+[node name="Door_Indoor" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Door_Indoor"]
+position = Vector2( 512.883, 573.705 )
+shape = SubResource( 9 )
+
+[connection signal="body_entered" from="Door_Indoor" to="." method="_on_Door_Indoor_body_entered"]
