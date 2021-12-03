@@ -97,19 +97,19 @@ scale = Vector2( 2, 2 )
 [node name="Predio3" parent="Structure/YSort" groups=[
 "struct",
 ] instance=ExtResource( 10 )]
-position = Vector2( 603, 253.226 )
+position = Vector2( 591.465, 409.61 )
 scale = Vector2( 1.5, 1.5 )
 
 [node name="Predio4" parent="Structure/YSort" groups=[
 "struct",
 ] instance=ExtResource( 11 )]
-position = Vector2( 1924.45, 873.531 )
+position = Vector2( 1922.45, 880.531 )
 scale = Vector2( 1.5, 1.5 )
 
 [node name="Predio5" parent="Structure/YSort" groups=[
 "struct",
 ] instance=ExtResource( 12 )]
-position = Vector2( 1970.09, 240.718 )
+position = Vector2( 1967.09, 245.718 )
 scale = Vector2( 2, 2 )
 
 [node name="down" type="StaticBody2D" parent="Structure/YSort"]
