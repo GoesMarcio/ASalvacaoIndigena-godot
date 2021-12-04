@@ -105,6 +105,30 @@ position = Vector2( 258.669, 851.452 )
 [node name="Tree8" parent="YSort" instance=ExtResource( 4 )]
 position = Vector2( 545.687, 499.71 )
 
+[node name="Barraca7" parent="YSort" instance=ExtResource( 5 )]
+position = Vector2( 79.8635, 793.193 )
+scale = Vector2( 1, 1 )
+
+[node name="Barraca6" parent="YSort" instance=ExtResource( 5 )]
+position = Vector2( 465.175, 809.173 )
+scale = Vector2( 1, 1 )
+
+[node name="Barraca5" parent="YSort" instance=ExtResource( 5 )]
+position = Vector2( 456.712, 561 )
+scale = Vector2( 1, 1 )
+
+[node name="Barraca4" parent="YSort" instance=ExtResource( 5 )]
+position = Vector2( 471.601, 368.181 )
+scale = Vector2( 1, 1 )
+
+[node name="Barraca3" parent="YSort" instance=ExtResource( 5 )]
+position = Vector2( 167.272, 551.268 )
+scale = Vector2( 1, 1 )
+
+[node name="Barraca2" parent="YSort" instance=ExtResource( 5 )]
+position = Vector2( 222.875, 289.368 )
+scale = Vector2( 1, 1 )
+
 [node name="Barraca" parent="YSort" instance=ExtResource( 5 )]
 position = Vector2( 64.8689, 156.661 )
 scale = Vector2( 1, 1 )
