@@ -99,6 +99,10 @@ func change_skin():
 func change_can_move(can):
 	can_move = can
 
+func get_bow():
+	sprite_arrow = "yes"
+	change_skin()
+
 func receive_shot():
 	life -= 2
 	get_tree().call_group("Life", "update_life", life)

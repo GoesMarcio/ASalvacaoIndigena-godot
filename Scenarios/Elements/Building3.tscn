@@ -1,12 +1,17 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scenarios/City/City.tres" type="TileSet" id=1]
+[ext_resource path="res://Scenarios/Elements/Building3.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 63.7902, 24.0692 )
 
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 7.96873, 10 )
+
 [node name="Predio1" type="StaticBody2D"]
 light_mask = 0
+script = ExtResource( 2 )
 
 [node name="Prédios" type="TileMap" parent="."]
 position = Vector2( -288.14, -479.889 )
@@ -21,3 +26,13 @@ tile_data = PoolIntArray( 1572874, 37, 0, 1572875, 97, 0, 1572876, 97, 0, 157287
 [node name="predio_branco" type="CollisionShape2D" parent="."]
 scale = Vector2( 2, 2 )
 shape = SubResource( 1 )
+
+[node name="Door3" type="Area2D" parent="."]
+position = Vector2( -2.981, -39.1636 )
+scale = Vector2( 2, 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Door3"]
+position = Vector2( 1.02365, 35.335 )
+shape = SubResource( 2 )
+
+[connection signal="body_entered" from="Door3" to="." method="_on_Door3_body_entered"]

@@ -1,23 +1,5 @@
 extends Control
 
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	#$VBoxContainer/StartGame.grab_click_focus()
-	pass
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
-
-
-
 func _on_button_gui_input(event):
 	if event.is_pressed():
 		get_parent().add_child(get_parent().tribe.instance())
