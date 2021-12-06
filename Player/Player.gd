@@ -104,7 +104,7 @@ func get_bow():
 	change_skin()
 
 func receive_shot():
-	life -= 2
+	life -= 10
 	get_tree().call_group("Life", "update_life", life)
 	if life <= 0:
 		get_tree().call_group("Game", "game_over")

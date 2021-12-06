@@ -318,7 +318,7 @@ shape = SubResource( 10 )
 [node name="Player" parent="Structure/YSort" groups=[
 "Player",
 ] instance=ExtResource( 3 )]
-position = Vector2( 74.5402, 921.832 )
+position = Vector2( 58.504, 1059.03 )
 run_speed = 200
 
 [node name="Camera2D" type="Camera2D" parent="Structure/YSort/Player"]

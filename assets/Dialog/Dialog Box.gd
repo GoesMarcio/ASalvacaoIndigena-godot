@@ -5,8 +5,8 @@ onready var oldIndian = get_node("/root/Game/Hut/YSort/OldIndian")
 
 var dialog = [
 	'Olá, Yakecan! Como você sabe, somos a última aldeia indígena.',
-	'Mas há uma maneira de salvar nossa tribo. Se você encontrar o arco dos Ticuna e a flecha dos Guarani, talvez há uma solução.',
-	'Encontre esses dois objetos, e acertando a flecha na estátua de no centro da cidade você voltara no tempo.',
+	'Mas há uma maneira de salvar nossa tribo. Se você encontrar o arco e flecha dos Ticuna, talvez há uma solução.',
+	'Encontre esses objetos, e acertando a flecha na estátua no centro da cidade você voltara no tempo.',
 	'Depois de voltar no tempo, derrote aqueles portugueses infelizes.',
 	'Mas não há muito tempo, você tem que encontrar antes que minha vida acabe, vá de uma vez!',
 	'Se eu ou você morrer, será o nosso fim para sempre!'
@@ -14,7 +14,7 @@ var dialog = [
 
 var dialog_talked = [
 	'Você de novo, Yakecan!',
-	'Vá logo, fazer o que eu falei, não temos muito tempo!'
+	'Vá logo fazer o que eu falei, não temos muito tempo!'
 ]
 
 var dialog_index = 0

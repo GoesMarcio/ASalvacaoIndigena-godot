@@ -16,13 +16,6 @@ func _physics_process(delta):
 	if can_move:
 		position += side_position * speed * delta
 
-func _on_Arrow_body_entered(body):
-	print(body.name)
-	return
-	if body.is_in_group("Player"):
-		body.receive_shot()
-		#body.queue_free()
-		queue_free()
 
 func change_side(side):
 	side_position = side
@@ -48,3 +41,8 @@ func _on_Shot_area_entered(area):
 
 func on_time_out_complete():
 	queue_free()
+
+
+func _on_Shot_body_entered(body):
+	if body.is_in_group("struct"):
+		queue_free()

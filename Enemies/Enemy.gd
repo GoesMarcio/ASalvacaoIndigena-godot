@@ -57,7 +57,7 @@ func _physics_process(delta):
 	if !get_tree().has_group("Player"):
 		player == null
 		
-	line2d.global_position = Vector2.ZERO
+	
 	if player and player_spotted:
 		generate_path()
 	
@@ -99,15 +99,15 @@ func generate_path():
 				sprite.stop()
 				state = ATTACK
 				path = [re_distance(position, player.position)]
-				line2d.points = []
+				
 			else:
 				state = MOVE
 				path = levelNavigation.get_simple_path(position, position + d[1], true)
-				line2d.points = path
+				
 		else:
 			state = MOVE
 			path = levelNavigation.get_simple_path(position, side[1], true)
-			line2d.points = path
+			
 
 func check_axis(side):
 	match side:
@@ -203,6 +203,7 @@ func receive_shot():
 	life -= 50
 	progressLife.value = (life * 100 / max_life)
 	if(life <= 0):
+		get_tree().call_group("Beach", "enemy_die")
 		queue_free()
 
 

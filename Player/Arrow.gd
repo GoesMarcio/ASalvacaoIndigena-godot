@@ -64,6 +64,7 @@ func _on_Arrow_area_entered(area):
 	if can_move:
 		if area.is_in_group("Statue"):
 			stuckStructSound.play()
+			get_tree().call_group("Life", "update_life", 100)
 			var root = get_node("/root/Game")	
 			root.add_child(root.beach.instance())
 			var city = get_node("/root/Game/City")

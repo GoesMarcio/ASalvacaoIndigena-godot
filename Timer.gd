@@ -1,6 +1,6 @@
 extends Label
 
-onready var time := 60.0
+onready var time := 120.0
 
 func startTimer():
 	get_parent().visible = true

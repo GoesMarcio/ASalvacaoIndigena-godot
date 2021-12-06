@@ -20,12 +20,12 @@ atlas = ExtResource( 1 )
 region = Rect2( 39, 0, 39, 39 )
 
 [sub_resource type="AtlasTexture" id=4]
-atlas = ExtResource( 3 )
-region = Rect2( 0, 39, 39, 39 )
+atlas = ExtResource( 1 )
+region = Rect2( 39, 39, 39, 39 )
 
 [sub_resource type="AtlasTexture" id=5]
 atlas = ExtResource( 3 )
-region = Rect2( 39, 0, 39, 39 )
+region = Rect2( 0, 39, 39, 39 )
 
 [sub_resource type="AtlasTexture" id=6]
 atlas = ExtResource( 3 )
@@ -33,11 +33,11 @@ region = Rect2( 39, 39, 39, 39 )
 
 [sub_resource type="AtlasTexture" id=7]
 atlas = ExtResource( 3 )
-region = Rect2( 0, 0, 39, 39 )
+region = Rect2( 39, 0, 39, 39 )
 
 [sub_resource type="AtlasTexture" id=8]
-atlas = ExtResource( 1 )
-region = Rect2( 39, 39, 39, 39 )
+atlas = ExtResource( 3 )
+region = Rect2( 0, 0, 39, 39 )
 
 [sub_resource type="SpriteFrames" id=9]
 animations = [ {
@@ -58,12 +58,12 @@ animations = [ {
 }, {
 "frames": [ SubResource( 4 ) ],
 "loop": true,
-"name": "stuck_right",
+"name": "down",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 5 ) ],
 "loop": true,
-"name": "stuck_up",
+"name": "stuck_right",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 6 ) ],
@@ -73,12 +73,12 @@ animations = [ {
 }, {
 "frames": [ SubResource( 7 ) ],
 "loop": true,
-"name": "stuck_left",
+"name": "stuck_up",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 8 ) ],
 "loop": true,
-"name": "down",
+"name": "stuck_left",
 "speed": 5.0
 } ]
 

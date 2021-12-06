@@ -17,14 +17,6 @@ func _on_StartGame_mouse_exited():
 	$VBoxContainer/StartGame.texture = load("res://assets/Images/button.png")
 
 
-func _on_Options_mouse_entered():
-	$VBoxContainer/Options.texture = load("res://assets/Images/button_hover.png")
-
-
-func _on_Options_mouse_exited():
-	$VBoxContainer/Options.texture = load("res://assets/Images/button.png")
-
-
 func _on_Quit_mouse_entered():
 	$VBoxContainer/Quit.texture = load("res://assets/Images/button_hover.png")
 

@@ -1,9 +1,11 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Fonts/Xolonium-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://GameOver/GameOver.gd" type="Script" id=2]
+[ext_resource path="res://assets/Images/button2.png" type="Texture" id=3]
+[ext_resource path="res://assets/Themes/MainMenu.tres" type="DynamicFont" id=4]
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=1]
 size = 70
 font_data = ExtResource( 1 )
 
@@ -19,12 +21,60 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="."]
+anchor_top = -0.13
+anchor_bottom = -0.13
 margin_left = 305.5
 margin_top = 255.5
 margin_right = 718.5
 margin_bottom = 344.5
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 1 )
 text = "Game Over"
 __meta__ = {
 "_edit_use_anchors_": true
 }
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -136.0
+margin_right = 136.0
+margin_bottom = 221.0
+grow_horizontal = 0
+grow_vertical = 0
+size_flags_horizontal = 0
+size_flags_vertical = 3
+custom_constants/separation = 10
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Quit" type="TextureRect" parent="VBoxContainer"]
+margin_top = 77.0
+margin_right = 272.0
+margin_bottom = 144.0
+focus_neighbour_bottom = NodePath("../StartGame")
+mouse_default_cursor_shape = 2
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="VBoxContainer/Quit"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -24.0
+margin_top = -13.0
+margin_right = 24.0
+margin_bottom = 13.0
+custom_fonts/font = ExtResource( 4 )
+text = "Sair"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="gui_input" from="VBoxContainer/Quit" to="." method="_on_Quit_gui_input"]
