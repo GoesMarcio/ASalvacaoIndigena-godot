@@ -5,7 +5,7 @@
 [ext_resource path="res://Player/OldIndian.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenarios/Elements/Tree.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenarios/Elements/HutBeach.tscn" type="PackedScene" id=5]
-[ext_resource path="res://assets/Audios/fight.mp3" type="AudioStream" id=7]
+[ext_resource path="res://SFX/victory.mp3" type="AudioStream" id=6]
 [ext_resource path="res://Fonts/Xolonium-Regular.ttf" type="DynamicFontData" id=8]
 
 [sub_resource type="StyleBoxFlat" id=2]
@@ -185,7 +185,7 @@ run_speed = 200
 can_move = false
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource( 7 )
+stream = ExtResource( 6 )
 autoplay = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
