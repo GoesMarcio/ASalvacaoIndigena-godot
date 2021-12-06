@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/Tilesets/bridge.png" type="Texture" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Scenarios/Tribe/Tribe2.gd" type="Script" id=5]
 [ext_resource path="res://Scenarios/Tribe/Tribe2.tres" type="TileSet" id=6]
 [ext_resource path="res://assets/Tilesets/bridge1.png" type="Texture" id=7]
+[ext_resource path="res://assets/Audios/ambient.wav" type="AudioStream" id=8]
 
 [sub_resource type="TileSet" id=1]
 0/name = "bridge1.png 0"
@@ -263,3 +264,7 @@ position = Vector2( 487.665, 177.679 )
 ] instance=ExtResource( 4 )]
 position = Vector2( 412.702, 117.944 )
 scale = Vector2( 1, 0.999999 )
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 8 )
+autoplay = true

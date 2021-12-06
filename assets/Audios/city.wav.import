@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/city.wav-8851bedbcc812d7a0913b332e7fb0b09.sample"
+
+[deps]
+
+source_file="res://assets/Audios/city.wav"
+dest_files=[ "res://.import/city.wav-8851bedbcc812d7a0913b332e7fb0b09.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
