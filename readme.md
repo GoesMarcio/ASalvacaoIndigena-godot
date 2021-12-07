@@ -11,18 +11,17 @@ Breve descrição...
     - ~~Setar diálogos corretos~~
     - ~~Liberar HUD com vida~~
 - City:
-    - Policial
+    - ~~Policial~~
     - ~~YSort~~
-    - Terminar prédios e ambientes internos
-    - Sortear itens pelo mapa
+    - ~~Terminar prédios e ambientes internos~~
+    - ~~Sortear itens pelo mapa~~
     - ~~Volta no tempo~~
 - Volta no tempo:
     - Inimigos:
         - ~~Movimentação~~
         - ~~Tiros~~
-        - Sprites (em andamento)
-        - Outros...
-    - Inimigos no mapa
-    - Obstáculos no mapa
+        - ~~Sprites~~
+    - ~~Inimigos no mapa~~
+    - ~~Obstáculos no mapa~~
 - Outros:
-    - Sons nos ambientes e movimentos
+    - ~~Sons nos ambientes e movimentos~~
